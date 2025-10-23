@@ -2,10 +2,11 @@
 from fastapi import APIRouter, HTTPException, Depends, UploadFile, File
 from fastapi.responses import FileResponse
 from sqlmodel import Session, select
-from typing import List
+from typing import List, Optional
 from datetime import datetime
 import os
 import uuid
+from pydantic import BaseModel, field_validator
 
 from app.database import get_session
 from app.models import Site, Reading, ParserType
@@ -18,6 +19,38 @@ logger = logging.getLogger(__name__)
 SCREENSHOTS_DIR = "/data/downdetector_screenshots"
 
 router = APIRouter(prefix="/sites", tags=["sites"])
+
+
+class SiteUpdateRequest(BaseModel):
+    """Site update request model with datetime handling."""
+    display_name: Optional[str] = None
+    status_page: Optional[str] = None
+    feed_url: Optional[str] = None
+    poll_frequency_seconds: Optional[int] = None
+    parser: Optional[str] = None
+    is_active: Optional[bool] = None
+    console_only: Optional[bool] = None
+    use_playwright: Optional[bool] = None
+    auth_state_file: Optional[str] = None
+    downdetector_url: Optional[str] = None
+    latest_downdetector_screenshot: Optional[str] = None
+    downdetector_screenshot_uploaded_at: Optional[datetime] = None
+    last_notified_at: Optional[datetime] = None
+    last_notified_status: Optional[str] = None
+
+    @field_validator('downdetector_screenshot_uploaded_at', 'last_notified_at', mode='before')
+    @classmethod
+    def parse_datetime(cls, v):
+        """Convert string datetime to datetime object."""
+        if v is None or isinstance(v, datetime):
+            return v
+        if isinstance(v, str):
+            try:
+                # Handle ISO format with microseconds
+                return datetime.fromisoformat(v.replace('Z', '+00:00'))
+            except ValueError:
+                return None
+        return v
 
 
 @router.get("", response_model=List[Site])
@@ -62,7 +95,7 @@ async def create_site(site: Site, session: Session = Depends(get_session)):
 @router.put("/{site_id}", response_model=Site)
 async def update_site(
     site_id: str,
-    site_update: Site,
+    site_update: SiteUpdateRequest,
     session: Session = Depends(get_session)
 ):
     """Update a site."""
@@ -70,10 +103,11 @@ async def update_site(
     if not site:
         raise HTTPException(status_code=404, detail="Site not found")
 
-    # Update fields
-    update_data = site_update.model_dump(exclude_unset=True, exclude={"id", "created_at"})
+    # Update fields - only include fields that were actually set
+    update_data = site_update.model_dump(exclude_unset=True)
     for key, value in update_data.items():
-        setattr(site, key, value)
+        if value is not None:  # Only update non-None values
+            setattr(site, key, value)
 
     site.updated_at = datetime.utcnow()
 

@@ -175,6 +175,17 @@
       "is_active": true,
       "console_only": false,
       "use_playwright": false
+    },
+    {
+      "id": "Zoom",
+      "display_name": "Zoom",
+      "status_page": "https://status.zoom.us",
+      "feed_url": "https://www.zoomstatus.com/history.rss",
+      "poll_frequency_seconds": 300,
+      "parser": "auto",
+      "is_active": true,
+      "console_only": false,
+      "downdetector_url": "https://downdetector.com/status/zoom/"
     }
   ]
 }

@@ -12,6 +12,7 @@ from app.database import engine
 from app.parsers import parser_factory
 from app.config import settings
 from app.notifications import EmailNotifier
+from app.services.advisory_service import AdvisoryService
 
 logger = logging.getLogger(__name__)
 
@@ -120,6 +121,50 @@ class PollingScheduler:
                     auth_state_file=site.auth_state_file
                 )
 
+                # Filter by configured modules if any exist
+                from app.models import SiteModule
+                modules = session.exec(
+                    select(SiteModule)
+                    .where(SiteModule.site_id == site_id)
+                    .where(SiteModule.enabled == True)
+                ).all()
+
+                if modules and result.get("raw_data", {}).get("components"):
+                    # Get list of configured module names
+                    module_names = [m.module_name.lower() for m in modules]
+                    all_components = result["raw_data"]["components"]
+
+                    # Filter to only configured components
+                    filtered_components = [
+                        comp for comp in all_components
+                        if comp["name"].lower() in module_names
+                    ]
+
+                    if filtered_components:
+                        # Re-determine status based on filtered components
+                        from app.models import StatusType
+                        worst_status = StatusType.OPERATIONAL
+
+                        for comp in filtered_components:
+                            comp_status_str = comp.get("status", "operational")
+                            # Find worst status among filtered components
+                            if comp_status_str == "incident":
+                                worst_status = StatusType.INCIDENT
+                            elif comp_status_str == "degraded" and worst_status != StatusType.INCIDENT:
+                                worst_status = StatusType.DEGRADED
+                            elif comp_status_str == "maintenance" and worst_status == StatusType.OPERATIONAL:
+                                worst_status = StatusType.MAINTENANCE
+
+                        # Update result with filtered status
+                        result["status"] = worst_status
+                        affected_names = [c["name"] for c in filtered_components if c["status"] != "operational"]
+                        if affected_names:
+                            result["summary"] = f"{', '.join(affected_names)}: {worst_status.value}"
+                        else:
+                            result["summary"] = f"Monitored components operational ({len(filtered_components)} components)"
+
+                        logger.info(f"Filtered to {len(filtered_components)} configured modules for {site_id}")
+
                 # Get previous reading to detect changes
                 last_reading = session.exec(
                     select(Reading)
@@ -151,6 +196,18 @@ class PollingScheduler:
 
                 session.add(reading)
                 session.commit()
+
+                # Process advisories (extract and analyze)
+                try:
+                    advisories = await AdvisoryService.process_site_advisories(
+                        session=session,
+                        site_id=site_id,
+                        feed_data=result
+                    )
+                    if advisories:
+                        logger.info(f"Processed {len(advisories)} advisories for {site_id}")
+                except Exception as advisory_error:
+                    logger.error(f"Failed to process advisories for {site_id}: {advisory_error}")
 
                 # Check if we should send a notification
                 old_status = last_reading.status if last_reading else StatusType.UNKNOWN

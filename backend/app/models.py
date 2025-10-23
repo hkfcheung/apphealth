@@ -70,6 +70,66 @@ class Reading(SQLModel, table=True):
     site: Site = Relationship(back_populates="readings")
 
 
+class SiteModule(SQLModel, table=True):
+    """Modules/packages that a user cares about for a site."""
+
+    __tablename__ = "site_modules"
+
+    id: Optional[int] = Field(default=None, primary_key=True)
+    site_id: str = Field(foreign_key="sites.id", index=True)
+    module_name: str  # e.g., "Exchange Online", "Teams", "SharePoint Online"
+    enabled: bool = Field(default=True)
+    created_at: datetime = Field(default_factory=datetime.utcnow)
+
+
+class CriticalityLevel(str, Enum):
+    """Advisory criticality levels."""
+    HIGH = "high"
+    MEDIUM = "medium"
+    LOW = "low"
+    UNKNOWN = "unknown"
+
+
+class Advisory(SQLModel, table=True):
+    """Service advisories and notices."""
+
+    __tablename__ = "advisories"
+
+    id: Optional[int] = Field(default=None, primary_key=True)
+    site_id: str = Field(foreign_key="sites.id", index=True)
+
+    # Advisory details
+    title: str
+    description: Optional[str] = None
+    severity: Optional[str] = None  # Vendor's severity level
+    criticality: CriticalityLevel = Field(default=CriticalityLevel.UNKNOWN)  # Our analysis
+
+    # Relevance
+    affects_us: bool = Field(default=False)  # Does it affect our configured modules?
+    affected_modules: List[str] = Field(default=[], sa_column=Column(JSON))  # Which modules
+    relevance_reason: Optional[str] = None  # LLM explanation of why it's relevant
+
+    # Metadata
+    is_informational: bool = Field(default=False)
+    source_url: Optional[str] = None
+    published_at: Optional[datetime] = None
+    resolved_at: Optional[datetime] = None
+
+    created_at: datetime = Field(default_factory=datetime.utcnow, index=True)
+
+
+class ChatMessage(SQLModel, table=True):
+    """Admin chat messages for querying status data."""
+
+    __tablename__ = "chat_messages"
+
+    id: Optional[int] = Field(default=None, primary_key=True)
+    role: str  # "user" or "assistant"
+    content: str
+    context_data: Optional[dict] = Field(default={}, sa_column=Column(JSON))  # Relevant data for this message
+    created_at: datetime = Field(default_factory=datetime.utcnow, index=True)
+
+
 class AppSettings(SQLModel, table=True):
     """Application settings stored in database."""
 
@@ -85,6 +145,11 @@ class AppSettings(SQLModel, table=True):
     smtp_from_email: Optional[str] = None
     notification_email: Optional[str] = None
     notification_cooldown_minutes: int = 60
+
+    # LLM settings
+    llm_provider: Optional[str] = None  # "openai", "anthropic", or None for fallback
+    llm_api_key: Optional[str] = None
+    llm_model: Optional[str] = None  # "gpt-4", "claude-3-5-sonnet-20241022", etc.
 
     updated_at: datetime = Field(default_factory=datetime.utcnow)
 

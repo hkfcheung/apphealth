@@ -5,6 +5,8 @@ import HistoryModal from './components/HistoryModal';
 import StatusBanner from './components/StatusBanner';
 import GlobalPasteArea from './components/GlobalPasteArea';
 import AdminSettingsModal from './components/AdminSettingsModal';
+import ModuleConfigModal from './components/ModuleConfigModal';
+import AdminChatPanel from './components/AdminChatPanel';
 import { stateAPI, sitesAPI } from './services/api';
 
 export default function App() {
@@ -25,6 +27,8 @@ export default function App() {
   const [editingSite, setEditingSite] = useState(null);
   const [historyModalSite, setHistoryModalSite] = useState(null);
   const [showAdminModal, setShowAdminModal] = useState(false);
+  const [moduleConfigSite, setModuleConfigSite] = useState(null);
+  const [showChatPanel, setShowChatPanel] = useState(false);
 
   // Global paste area state
   const [activePasteService, setActivePasteService] = useState(null);
@@ -182,6 +186,14 @@ export default function App() {
             {/* Actions */}
             <div className="flex gap-2">
               <button
+                onClick={() => setShowChatPanel(true)}
+                className="px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-md hover:bg-blue-700 transition-colors"
+                aria-label="AI Chat Assistant"
+                title="AI Chat Assistant"
+              >
+                💬 AI Chat
+              </button>
+              <button
                 onClick={() => setShowAdminModal(true)}
                 className="px-4 py-2 text-sm font-medium text-gray-700 bg-gray-100 rounded-md hover:bg-gray-200 transition-colors"
                 aria-label="Admin settings"
@@ -275,6 +287,7 @@ export default function App() {
                 onEdit={() => handleEditSite(site)}
                 onDelete={() => handleDeleteSite(site.site_id)}
                 onRequestPaste={() => setActivePasteService(site)}
+                onConfigureModules={() => setModuleConfigSite(site)}
               />
             ))}
           </div>
@@ -304,6 +317,18 @@ export default function App() {
       <AdminSettingsModal
         isOpen={showAdminModal}
         onClose={() => setShowAdminModal(false)}
+      />
+
+      <ModuleConfigModal
+        isOpen={!!moduleConfigSite}
+        onClose={() => setModuleConfigSite(null)}
+        site={moduleConfigSite}
+      />
+
+      {/* AI Chat Panel */}
+      <AdminChatPanel
+        isOpen={showChatPanel}
+        onClose={() => setShowChatPanel(false)}
       />
 
       {/* Global Paste Area */}

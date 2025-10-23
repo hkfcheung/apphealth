@@ -26,6 +26,9 @@ class HTMLParser(BaseParser):
         try:
             soup = BeautifulSoup(content, "html.parser")
 
+            # Initialize components storage
+            self._components = []
+
             # Try Microsoft 365 Admin Center first (for authenticated pages)
             if 'admin.microsoft.com' in url or 'admin.cloud.microsoft' in url:
                 status, summary = self._extract_status_microsoft365(soup)
@@ -49,6 +52,7 @@ class HTMLParser(BaseParser):
                 "url": url,
                 "title": soup.title.string if soup.title else "",
                 "summary": summary,
+                "components": self._components if hasattr(self, '_components') else []
             }
 
             return {
@@ -64,6 +68,39 @@ class HTMLParser(BaseParser):
 
     def _extract_status_statuspage_io(self, soup: BeautifulSoup) -> tuple[StatusType, str]:
         """Extract status from Statuspage.io-based pages."""
+        # Extract component-level status first
+        components = []
+        component_containers = soup.find_all('div', {'class': 'component-inner-container'})
+
+        for container in component_containers:
+            status_attr = container.get('data-component-status', '')
+            name_elem = container.find('span', {'class': 'name'})
+
+            if name_elem:
+                component_name = name_elem.get_text(strip=True)
+                # Map Statuspage.io statuses to our StatusType
+                if status_attr == 'operational':
+                    comp_status = StatusType.OPERATIONAL
+                elif status_attr == 'degraded_performance':
+                    comp_status = StatusType.DEGRADED
+                elif status_attr == 'partial_outage':
+                    comp_status = StatusType.DEGRADED
+                elif status_attr == 'major_outage':
+                    comp_status = StatusType.INCIDENT
+                elif status_attr == 'under_maintenance':
+                    comp_status = StatusType.MAINTENANCE
+                else:
+                    comp_status = StatusType.UNKNOWN
+
+                components.append({
+                    'name': component_name,
+                    'status': comp_status.value
+                })
+
+        # Store components for later filtering
+        # This will be stored in raw_data and can be filtered by module config
+        self._components = components
+
         # Look for status indicator
         status_indicator = soup.find(class_=re.compile(r"status.*indicator", re.I))
         if status_indicator:

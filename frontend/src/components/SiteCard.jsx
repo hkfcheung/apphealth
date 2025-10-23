@@ -4,7 +4,7 @@ import Countdown from './Countdown';
 import DownDetectorGraph from './DownDetectorGraph';
 import { formatRelativeTime, formatDateTime } from '../utils/helpers';
 
-export default function SiteCard({ site, onPollNow, onViewHistory, onEdit, onDelete, onRequestPaste }) {
+export default function SiteCard({ site, onPollNow, onViewHistory, onEdit, onDelete, onRequestPaste, onConfigureModules }) {
   const handlePollNow = async (e) => {
     e.stopPropagation();
     if (onPollNow) {
@@ -115,6 +115,17 @@ export default function SiteCard({ site, onPollNow, onViewHistory, onEdit, onDel
             aria-label={`View ${site.display_name} history`}
           >
             History
+          </button>
+          <span className="text-gray-400">·</span>
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              if (onConfigureModules) onConfigureModules(site);
+            }}
+            className="text-blue-600 hover:underline"
+            aria-label={`Configure modules for ${site.display_name}`}
+          >
+            Modules
           </button>
           <span className="text-gray-400">·</span>
           <button

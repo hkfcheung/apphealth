@@ -58,8 +58,15 @@ class RSSParser(BaseParser):
                 }
                 incidents.append(incident)
 
-                if not latest_incident:
-                    latest_incident = {**incident, "published_datetime": published_date}  # Keep datetime for processing
+                # Find the first incident that's not in the future
+                if not latest_incident and published_date:
+                    hours_ago = (datetime.utcnow() - published_date).total_seconds() / 3600
+                    # Only use this incident if it's not in the future
+                    if hours_ago >= 0:
+                        latest_incident = {**incident, "published_datetime": published_date}  # Keep datetime for processing
+                elif not latest_incident and not published_date:
+                    # If no date, use it (assume it's current)
+                    latest_incident = {**incident, "published_datetime": None}
 
             # Determine status from latest incident
             status = StatusType.OPERATIONAL
@@ -73,19 +80,35 @@ class RSSParser(BaseParser):
                 resolved_keywords = ["resolved", "completed", "fixed", "corrected", "restored", "mitigated", "resolved:"]
                 is_resolved = any(word in title or word in summary_text for word in resolved_keywords)
 
-                # Check if incident is recent (within 24 hours)
+                # Check if incident is informational/minor (doesn't affect core service)
+                informational_keywords = [
+                    "delayed", "backlog", "may be delayed", "summary", "summaries",
+                    "no operational impact", "informational", "announcement",
+                    "ip address changes", "scheduled", "update:"
+                ]
+                is_informational = any(word in title or word in summary_text for word in informational_keywords)
+
+                # Check if incident is recent (within 24 hours) and NOT in the future
                 if latest_incident.get("published_datetime"):
                     hours_ago = (datetime.utcnow() - latest_incident["published_datetime"]).total_seconds() / 3600
-                    has_recent_incident = hours_ago < 24
+                    # Only consider it recent if it's in the past and within 24 hours
+                    has_recent_incident = 0 <= hours_ago < 24
 
                 # Determine status based on incident state
-                if is_resolved or not has_recent_incident:
-                    # Old or resolved incidents don't affect status
+                if is_resolved or not has_recent_incident or is_informational:
+                    # Old, future, resolved, or informational incidents don't affect status
                     status = StatusType.OPERATIONAL
-                elif any(word in title for word in ["investigating", "identified", "monitoring"]):
-                    status = StatusType.DEGRADED
+                # Check for actual outages/incidents (not just monitoring)
+                elif any(word in summary_text for word in ["outage", "down", "major outage", "critical", "unavailable"]):
+                    status = StatusType.INCIDENT
                 elif any(word in title for word in ["outage", "down", "major", "critical"]):
                     status = StatusType.INCIDENT
+                # Check for degraded service (investigating/identified = active work)
+                elif any(word in summary_text for word in ["investigating", "identified"]):
+                    status = StatusType.DEGRADED
+                # "Monitoring" alone (without outage) = operational (just watching)
+                elif any(word in summary_text for word in ["monitoring"]) and not any(word in summary_text for word in ["outage", "down", "degraded"]):
+                    status = StatusType.OPERATIONAL
                 elif any(word in title for word in ["maintenance", "scheduled"]):
                     status = StatusType.MAINTENANCE
                 else:
@@ -103,8 +126,11 @@ class RSSParser(BaseParser):
             if status == StatusType.OPERATIONAL:
                 # If operational, show "All systems operational" instead of old incident titles
                 summary = "All systems operational"
+            elif latest_incident:
+                # Use the title from the latest non-future incident we determined
+                summary = latest_incident.get("title", "Active incident")
             else:
-                summary = extract_summary(raw_data, "rss")
+                summary = "No recent incidents"
 
             last_changed = latest_incident.get("published_datetime") if latest_incident and has_recent_incident else None
 

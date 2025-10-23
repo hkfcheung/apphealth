@@ -10,7 +10,7 @@ import os
 
 from app.config import settings
 from app.database import init_db, engine, Session
-from app.api import sites, state, admin
+from app.api import sites, state, admin, intelligence
 from app.polling import polling_scheduler
 from app.models import Site
 
@@ -94,6 +94,7 @@ app.add_middleware(
 app.include_router(sites.router, prefix=settings.api_prefix)
 app.include_router(state.router, prefix=settings.api_prefix)
 app.include_router(admin.router, prefix=settings.api_prefix)
+app.include_router(intelligence.router, prefix=settings.api_prefix)
 
 
 @app.get("/")

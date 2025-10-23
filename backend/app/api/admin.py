@@ -16,6 +16,7 @@ router = APIRouter(prefix="/admin", tags=["admin"])
 
 class SettingsUpdate(BaseModel):
     """Settings update request."""
+    # SMTP settings
     smtp_host: Optional[str] = None
     smtp_port: int = 587
     smtp_username: Optional[str] = None
@@ -23,6 +24,11 @@ class SettingsUpdate(BaseModel):
     smtp_from_email: Optional[str] = None
     notification_email: Optional[str] = None
     notification_cooldown_minutes: int = 60
+
+    # LLM settings
+    llm_provider: Optional[str] = None  # "openai", "anthropic", or None
+    llm_api_key: Optional[str] = None
+    llm_model: Optional[str] = None
 
 
 @router.get("/settings", response_model=AppSettings)
@@ -50,18 +56,25 @@ async def update_settings(
         settings = AppSettings(id=1)
         session.add(settings)
 
-    # Update fields
+    # Update SMTP fields
     settings.smtp_host = settings_update.smtp_host
     settings.smtp_port = settings_update.smtp_port
     settings.smtp_username = settings_update.smtp_username
 
-    # Only update password if provided (don't clear it)
+    # Only update passwords/API keys if provided (don't clear them)
     if settings_update.smtp_password:
         settings.smtp_password = settings_update.smtp_password
 
     settings.smtp_from_email = settings_update.smtp_from_email
     settings.notification_email = settings_update.notification_email
     settings.notification_cooldown_minutes = settings_update.notification_cooldown_minutes
+
+    # Update LLM fields
+    settings.llm_provider = settings_update.llm_provider
+    if settings_update.llm_api_key:
+        settings.llm_api_key = settings_update.llm_api_key
+    settings.llm_model = settings_update.llm_model
+
     settings.updated_at = datetime.utcnow()
 
     session.add(settings)

@@ -72,3 +72,5 @@ data/
 .playwright/
 playwright-report/
 test-results/
+*.json.state
+microsoft_auth_state.json
