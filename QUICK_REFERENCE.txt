@@ -1,0 +1,126 @@
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                     STATUS DASHBOARD - QUICK REFERENCE                       ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+📍 ACCESS POINTS
+───────────────────────────────────────────────────────────────────────────────
+  Dashboard:    http://localhost
+  API:          http://localhost:8000
+  API Docs:     http://localhost:8000/docs
+  Health:       http://localhost:8000/health
+
+🎛️  DOCKER COMMANDS
+───────────────────────────────────────────────────────────────────────────────
+  Start:        docker-compose up -d
+  Stop:         docker-compose down
+  Restart:      docker-compose restart
+  Logs:         docker-compose logs -f
+  Rebuild:      docker-compose build && docker-compose up -d
+
+✏️  UPDATE A SITE (3 Ways)
+───────────────────────────────────────────────────────────────────────────────
+  1. VIA WEB UI (Easiest):
+     • Open http://localhost
+     • Click "Edit" on site card
+     • Update fields → Click "Update Site"
+
+  2. VIA API:
+     curl -X PUT http://localhost:8000/api/sites/SITE_ID \
+       -H "Content-Type: application/json" \
+       -d '{"feed_url": "https://status.example.com/history.rss"}'
+
+  3. VIA CONFIG FILE:
+     • Edit seed_config.json
+     • Restart: docker-compose restart backend
+
+🔍 FIND RSS FEEDS
+───────────────────────────────────────────────────────────────────────────────
+  Check page source:
+    curl -s "https://status.example.com/" | grep -i "rss\|atom"
+
+  Common patterns:
+    /history.rss
+    /history.atom
+    /api/v2/summary.json
+    /feed.rss
+
+  Example (DocuSign):
+    https://status.docusign.com/history.rss
+
+🧪 TEST A SITE
+───────────────────────────────────────────────────────────────────────────────
+  Poll manually:
+    curl -X POST http://localhost:8000/api/sites/SITE_ID/poll
+
+  Check status:
+    curl http://localhost:8000/api/state/SITE_ID | python3 -m json.tool
+
+  View history:
+    curl "http://localhost:8000/api/sites/SITE_ID/history?limit=10"
+
+📊 CURRENT STATUS (All Sites)
+───────────────────────────────────────────────────────────────────────────────
+  📡 JSON API (1):        ✅ Box
+  
+  📰 RSS/Atom (5):        ✅ Atlassian/Jira
+                          ✅ DocuSign
+                          ✅ Netlify
+                          ✅ Slack
+                          ✅ Smartsheet
+  
+  🌐 HTML Scraping (4):   ✅ SentinelOne
+                          ❓ AWS Service Health
+                          ❓ Adobe Status
+                          ❓ Veeva
+
+  📋 Console Only (1):    AWS Health Dashboard (inactive)
+
+🛠️  COMMON FIXES
+───────────────────────────────────────────────────────────────────────────────
+  ISSUE: Feed URL returning 404
+  FIX:   Try /history.rss, /api/v2/summary.json, set parser to "auto"
+
+  ISSUE: URL has tracking params (?_ga=...)
+  FIX:   Remove everything after "?" to get clean URL
+
+  ISSUE: Shows old incident when operational
+  FIX:   Already fixed! RSS parser now detects resolved incidents
+
+  ISSUE: HTML scraping not working
+  FIX:   Look for RSS feed first (almost always better)
+
+📚 DOCUMENTATION
+───────────────────────────────────────────────────────────────────────────────
+  README.md                 - Full documentation
+  QUICKSTART.md            - Daily usage guide
+  UPDATE_SITE_GUIDE.md     - How to update sites
+  FINDING_RSS_FEEDS.md     - Finding & using feeds
+  FIXES_SUMMARY.md         - Recent fixes & improvements
+  QUICK_REFERENCE.txt      - This file
+
+💡 PRO TIPS
+───────────────────────────────────────────────────────────────────────────────
+  • Always prefer RSS/JSON feeds over HTML scraping
+  • Use "auto" parser when unsure - it detects automatically
+  • Remove tracking parameters from URLs
+  • Test with "Poll Now" after changes
+  • Check logs if polling fails: docker-compose logs backend | grep SITE_ID
+  • Most Statuspage.io sites have /history.rss available
+
+🎯 QUICK STATS
+───────────────────────────────────────────────────────────────────────────────
+  Total Sites:       11
+  RSS/JSON Feeds:    6/6 (100% working)
+  HTML Scraping:     1/4 (25% working - inherently less reliable)
+  Overall Success:   7/11 (64%)
+
+🚀 GETTING HELP
+───────────────────────────────────────────────────────────────────────────────
+  Check Logs:       docker-compose logs -f backend
+  API Docs:         http://localhost:8000/docs
+  Health Check:     curl http://localhost:8000/health
+  View All States:  curl http://localhost:8000/api/state
+
+═══════════════════════════════════════════════════════════════════════════════
+Dashboard Status: ✅ OPERATIONAL | All RSS feeds fixed and working correctly!
+═══════════════════════════════════════════════════════════════════════════════
