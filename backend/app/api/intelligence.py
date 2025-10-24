@@ -296,16 +296,45 @@ async def _get_chat_context(session: Session) -> Dict[str, Any]:
             .where(Reading.site_id == site.id)
             .where(Reading.created_at >= since_24h)
             .order_by(Reading.created_at.desc())
-            .limit(20)  # Last 20 readings per service
         ).all()
 
+        # Include all non-operational readings + recent operational changes
+        prev_status = None
+        included_count = 0
         for reading in readings:
-            historical_readings.append({
-                "site": site.display_name,
-                "status": reading.status.value,
-                "summary": reading.summary,
-                "timestamp": reading.created_at.isoformat()
-            })
+            # Always include non-operational statuses
+            if reading.status != StatusType.OPERATIONAL:
+                historical_readings.append({
+                    "site": site.display_name,
+                    "status": reading.status.value,
+                    "summary": reading.summary,
+                    "timestamp": reading.created_at.isoformat()
+                })
+                included_count += 1
+            # Include status changes (e.g., degraded -> operational)
+            elif prev_status and prev_status != reading.status:
+                historical_readings.append({
+                    "site": site.display_name,
+                    "status": reading.status.value,
+                    "summary": reading.summary,
+                    "timestamp": reading.created_at.isoformat()
+                })
+                included_count += 1
+            # Include first few operational readings for context
+            elif included_count < 3:
+                historical_readings.append({
+                    "site": site.display_name,
+                    "status": reading.status.value,
+                    "summary": reading.summary,
+                    "timestamp": reading.created_at.isoformat()
+                })
+                included_count += 1
+
+            prev_status = reading.status
+
+            # Limit per service to avoid overwhelming context
+            if included_count >= 15:
+                break
 
     # Sort by timestamp descending
     historical_readings.sort(key=lambda x: x["timestamp"], reverse=True)
@@ -353,7 +382,7 @@ async def _get_chat_context(session: Session) -> Dict[str, Any]:
         "total_services": len(all_sites_status),
         "all_services": all_sites_status,
         "current_issues": current_issues,
-        "historical_readings": historical_readings[:50],  # Limit to 50 most recent
+        "historical_readings": historical_readings[:200],  # Increased limit for better coverage
         "recent_advisories": [
             {
                 "site_id": a.site_id,

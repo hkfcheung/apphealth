@@ -194,6 +194,14 @@ export default function App() {
                 💬 AI Chat
               </button>
               <button
+                onClick={() => window.open('https://status.dayonebio.com/', '_blank')}
+                className="px-4 py-2 text-sm font-medium text-white bg-teal-600 rounded-md hover:bg-teal-700 transition-colors"
+                aria-label="View internal services status"
+                title="View Day One Bio Internal Services"
+              >
+                🏢 Internal Services
+              </button>
+              <button
                 onClick={() => setShowAdminModal(true)}
                 className="px-4 py-2 text-sm font-medium text-gray-700 bg-gray-100 rounded-md hover:bg-gray-200 transition-colors"
                 aria-label="Admin settings"

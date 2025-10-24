@@ -103,12 +103,9 @@ class RSSParser(BaseParser):
                     status = StatusType.INCIDENT
                 elif any(word in title for word in ["outage", "down", "major", "critical"]):
                     status = StatusType.INCIDENT
-                # Check for degraded service (investigating/identified = active work)
-                elif any(word in summary_text for word in ["investigating", "identified"]):
+                # Check for degraded service (investigating/identified/monitoring = incident still open)
+                elif any(word in summary_text for word in ["investigating", "identified", "monitoring"]):
                     status = StatusType.DEGRADED
-                # "Monitoring" alone (without outage) = operational (just watching)
-                elif any(word in summary_text for word in ["monitoring"]) and not any(word in summary_text for word in ["outage", "down", "degraded"]):
-                    status = StatusType.OPERATIONAL
                 elif any(word in title for word in ["maintenance", "scheduled"]):
                     status = StatusType.MAINTENANCE
                 else:
