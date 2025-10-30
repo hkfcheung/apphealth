@@ -114,6 +114,25 @@ class ParserFactory:
             import asyncio
             await asyncio.sleep(3)
 
+            # For Microsoft 365 admin center, wait for the service health content to load
+            if 'admin.microsoft.com' in url and 'servicehealth' in url:
+                try:
+                    # Wait for either the issues section or the "no issues" message
+                    await page.wait_for_selector('text=Active issues', timeout=10000)
+                    logger.info("M365: Found 'Active issues' text, scrolling and waiting for table to load...")
+
+                    # Scroll down to ensure table content loads
+                    await page.evaluate("window.scrollTo(0, document.body.scrollHeight)")
+                    await asyncio.sleep(2)
+
+                    # Scroll back up
+                    await page.evaluate("window.scrollTo(0, 0)")
+                    await asyncio.sleep(3)  # Extra wait for content to stabilize
+
+                    logger.info("M365: Finished scrolling, capturing content...")
+                except Exception as e:
+                    logger.warning(f"M365: Could not find 'Active issues' text within 10s: {e}")
+
             content = await page.content()
             await browser.close()
 

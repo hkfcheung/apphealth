@@ -52,7 +52,8 @@ class HTMLParser(BaseParser):
                 "url": url,
                 "title": soup.title.string if soup.title else "",
                 "summary": summary,
-                "components": self._components if hasattr(self, '_components') else []
+                "components": self._components if hasattr(self, '_components') else [],
+                "incidents": self._incidents if hasattr(self, '_incidents') else []
             }
 
             return {
@@ -232,6 +233,9 @@ class HTMLParser(BaseParser):
         if 'sign in' in page_text.lower() and 'service health' not in page_text.lower():
             return StatusType.UNKNOWN, "Authentication required"
 
+        # Initialize incidents list for advisory extraction
+        incidents = []
+
         # Look for service health status in the page
         # M365 admin center shows:
         # - "Incident" = Major outage (INCIDENT status)
@@ -239,13 +243,145 @@ class HTMLParser(BaseParser):
         # - "Advisory" = Informational only (OPERATIONAL status)
         # - "Healthy" = Normal operation (OPERATIONAL status)
 
-        # Count actual incidents (not advisories)
-        incident_count = 0
+        # NEW APPROACH: Search for "Active issues Microsoft is working on" section
+        # and count occurrences of incident types in the text
+        logger.info(f"M365: Page text length: {len(page_text)} chars")
 
-        # Look for active incidents (major issues)
-        if re.search(r'(\d+)\s+active\s+incident', page_text, re.I):
-            match = re.search(r'(\d+)\s+active\s+incident', page_text, re.I)
-            incident_count = int(match.group(1))
+        # Look for the "Active issues" section header
+        has_active_issues_section = 'Active issues Microsoft is working on' in page_text or 'active issues' in page_text.lower()
+
+        # Count incident types by searching for the exact phrases in the page text
+        # These appear in the "Issue type" column of the table
+        # Use case-insensitive search
+        incident_pattern = r'\bincident\b'
+        advisory_pattern = r'\badvisory\b'
+
+        # Count occurrences of incident types (case-insensitive)
+        incident_matches = re.findall(incident_pattern, page_text, re.IGNORECASE)
+        advisory_matches = re.findall(advisory_pattern, page_text, re.IGNORECASE)
+
+        incident_count = len(incident_matches)
+        advisory_count = len(advisory_matches)
+
+        logger.info(f"M365: Found {incident_count} incident mentions, {advisory_count} advisory mentions")
+        logger.info(f"M365: Has active issues section: {has_active_issues_section}")
+
+        # Debug: Log a sample of the page text to understand what we're seeing
+        page_text_sample = page_text[:1000] if len(page_text) > 1000 else page_text
+        logger.info(f"M365: Page text sample (first 1000 chars): {page_text_sample[:500]}...")
+
+        # Extract individual advisories/incidents from the page
+        # Microsoft 365 Admin Center typically has advisories in table rows or list items
+        # Try multiple selectors to find advisory items
+        advisory_elements = []
+
+        # Common patterns in M365 admin portal
+        advisory_elements.extend(soup.find_all('div', class_=re.compile(r'issue|incident|advisory|service-health-item', re.I)))
+        advisory_elements.extend(soup.find_all('tr', attrs={'data-automation-id': re.compile(r'issue|incident|row', re.I)}))
+        advisory_elements.extend(soup.find_all('li', class_=re.compile(r'issue|incident|advisory', re.I)))
+
+        logger.info(f"M365: Found {len(advisory_elements)} advisory elements from specific selectors")
+
+        # Also look for table rows that might contain service health data
+        if not advisory_elements:
+            # Look for any table with health/status/service data
+            tables = soup.find_all('table')
+            logger.info(f"M365: Found {len(tables)} tables")
+            for table in tables:
+                rows = table.find_all('tr')
+                if len(rows) > 1:  # Has header + data rows
+                    advisory_elements.extend(rows[1:])  # Skip header row
+            logger.info(f"M365: After table extraction: {len(advisory_elements)} elements")
+
+        # Extract details from each advisory element
+        for elem in advisory_elements:
+            elem_text = elem.get_text(strip=True)
+
+            # Skip empty or very short elements
+            if not elem_text or len(elem_text) < 10:
+                continue
+
+            # Try to extract title, status, and ID
+            title = ""
+            status_type = "Advisory"
+            advisory_id = ""
+
+            # Look for title in heading tags or bold text
+            title_elem = elem.find(['h1', 'h2', 'h3', 'h4', 'strong', 'b'])
+            if title_elem:
+                title = title_elem.get_text(strip=True)
+            elif elem_text:
+                # Use first line or first 100 chars as title
+                lines = elem_text.split('\n')
+                title = lines[0] if lines else elem_text[:100]
+
+            # Extract ID if present (like MO123456)
+            id_match = re.search(r'\b([A-Z]{2}\d{6,})\b', elem_text)
+            if id_match:
+                advisory_id = id_match.group(1)
+                # Include ID in title if not already there
+                if advisory_id not in title:
+                    title = f"{advisory_id}: {title}"
+
+            # Determine type (Incident, Advisory, Service Degradation)
+            if re.search(r'\bIncident\b', elem_text):
+                status_type = "Incident"
+            elif re.search(r'degraded|degradation', elem_text, re.I):
+                status_type = "Service Degradation"
+            elif re.search(r'advisory|informational', elem_text, re.I):
+                status_type = "Advisory"
+
+            # Extract description (remaining text after title)
+            description = elem_text
+            if title and title in description:
+                description = description.replace(title, '', 1).strip()
+
+            # Try to find timestamp
+            time_elem = elem.find('time')
+            published_at = None
+            if time_elem and time_elem.get('datetime'):
+                published_at = time_elem.get('datetime')
+            else:
+                # Look for date patterns in text
+                date_match = re.search(r'(\d{1,2}/\d{1,2}/\d{4}|\d{4}-\d{2}-\d{2})', elem_text)
+                if date_match:
+                    published_at = date_match.group(1)
+
+            # Only add if we have a meaningful title
+            if title and len(title) > 5:
+                incidents.append({
+                    'title': title,
+                    'description': description[:500] if description else title,  # Limit description length
+                    'severity': status_type,
+                    'published_at': published_at,
+                    'link': None,  # Microsoft admin portal doesn't have direct links
+                })
+
+        # Store incidents for advisory extraction
+        self._incidents = incidents
+
+        # Debug: Log extraction results
+        logger.info(f"M365: Extracted {len(incidents)} individual incidents/advisories from elements")
+
+        # Count actual incidents from extracted elements (not advisories)
+        extracted_incident_count = sum(1 for i in incidents if i['severity'] == 'Incident')
+        extracted_degraded_count = sum(1 for i in incidents if i['severity'] == 'Service Degradation')
+        extracted_advisory_count = sum(1 for i in incidents if i['severity'] == 'Advisory')
+
+        logger.info(f"M365: Extracted breakdown - Incidents: {extracted_incident_count}, Degraded: {extracted_degraded_count}, Advisories: {extracted_advisory_count}")
+
+        # Use the text-based counts for status determination (more reliable)
+        # If we see "Active issues" section AND found incident mentions, we likely have real incidents
+        # The word "incident" appears in: column header (1x), issue type cells (once per actual incident)
+        # So if count >= 2 and we have the active issues section, there are likely real incidents
+        adjusted_incident_count = max(0, incident_count - 1)  # Discount the column header
+
+        logger.info(f"M365: Adjusted incident count (removing column header): {adjusted_incident_count}")
+
+        # Determine overall status based on text analysis
+        # Priority: Active incidents with the "Active issues" section present
+        if has_active_issues_section and adjusted_incident_count > 0:
+            return StatusType.INCIDENT, f"{adjusted_incident_count} active incident(s)"
 
         # Check for explicit service degradation status
         if re.search(r'(service degradation|degraded)', page_text, re.I):
@@ -261,14 +397,13 @@ class HTMLParser(BaseParser):
                             return StatusType.DEGRADED, f"{service}: Service degraded"
                     return StatusType.DEGRADED, "Service degradation detected"
 
-        # Check for major outages/incidents
-        if incident_count > 0:
-            return StatusType.INCIDENT, f"{incident_count} active incident(s)"
+        # Use extracted incidents if text-based detection didn't work
+        if extracted_incident_count > 0:
+            return StatusType.INCIDENT, f"{extracted_incident_count} active incident(s)"
 
-        # Look for "Incident" status type (not Advisory)
-        if re.search(r'\bIncident\b', page_text):
-            # Found actual incident status
-            return StatusType.INCIDENT, "Active service incident"
+        # Check for degraded services
+        if extracted_degraded_count > 0:
+            return StatusType.DEGRADED, f"{extracted_degraded_count} service(s) degraded"
 
         # If we see "Healthy" status for services, that's operational
         # Count healthy services vs total services mentioned
@@ -276,10 +411,13 @@ class HTMLParser(BaseParser):
 
         # If we found the service health page and see healthy services, it's operational
         if 'service health' in page_text.lower() and healthy_count > 5:
-            # Check for advisories to mention them without changing status
-            advisory_matches = re.findall(r'(\d+)\s+advisor(?:y|ies)', page_text, re.I)
-            if advisory_matches:
-                total_advisories = sum(int(m) for m in advisory_matches)
+            # Report advisories if present
+            if extracted_advisory_count > 0:
+                return StatusType.OPERATIONAL, f"All services healthy ({extracted_advisory_count} informational advisories)"
+            # Also check for advisories mentioned in text
+            advisory_text_matches = re.findall(r'(\d+)\s+advisor(?:y|ies)', page_text, re.I)
+            if advisory_text_matches:
+                total_advisories = sum(int(m) for m in advisory_text_matches)
                 return StatusType.OPERATIONAL, f"All services healthy ({total_advisories} informational advisories)"
             return StatusType.OPERATIONAL, "All services healthy"
 
