@@ -1,0 +1,667 @@
+{
+  "cookies": [
+    {
+      "name": "s.SessID",
+      "value": "59f3ee60-9d99-4c11-bfdd-4fda35c04f15",
+      "domain": "admin.microsoft.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "s.cachemap",
+      "value": "20",
+      "domain": "admin.microsoft.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "x-portal-routekey",
+      "value": "wus",
+      "domain": "admin.microsoft.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "esctx-BhB5tTYA1Os",
+      "value": "AQABCQEAAABlMNzVhAPUTrARzfQjWPtKHsAJxfd9x3wdlza-ST0CnxiOQz7B99RO87pk0o35EceSJniWp5u1lMfxRmbAnvMVvY0wvrgOdOhG-LgDzA7-wX5PnICrRtHEDON2SCkfUM2X0ZYnAJAgh2BcLMv3dYrexFtTevPSFW8nAIzTF2WORSAA",
+      "domain": ".login.microsoftonline.com",
+      "path": "/",
+      "expires": 1761124530.965443,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "x-ms-gateway-slice",
+      "value": "estsfd",
+      "domain": "login.microsoftonline.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "stsservicecookie",
+      "value": "estsfd",
+      "domain": "login.microsoftonline.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "AADSSO",
+      "value": "NA|NoExtension",
+      "domain": ".login.microsoftonline.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "esctx-rX5sIS1rTI",
+      "value": "AQABCQEAAABlMNzVhAPUTrARzfQjWPtKYzqQI2KndFkc-Esojl_4GFZpr66F3TWlIP6R2a1UTIfU-oNDLAQurWkCYJ4q4o6CvN4aK2ProctNx9-oZ3Vh0fbzT5lS6SYAT6Ok6idBOWd5nWZN7xe8qY0_abAyI8DNpkprGi79PzA5VFo8FJe6ZCAA",
+      "domain": ".login.microsoftonline.com",
+      "path": "/",
+      "expires": 1761124532.379692,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "MicrosoftApplicationsTelemetryDeviceId",
+      "value": "b14b87e1-90a0-4776-9a36-7e7432cdcccc",
+      "domain": "login.microsoftonline.com",
+      "path": "/",
+      "expires": 1792659074.818271,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "brcap",
+      "value": "0",
+      "domain": ".login.microsoftonline.com",
+      "path": "/",
+      "expires": 1794822674,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "MC1",
+      "value": "GUID=45fddfb8d94940dda14673ce451ecfb9&HASH=45fd&LV=202510&V=4&LU=1761123035149",
+      "domain": ".microsoft.com",
+      "path": "/",
+      "expires": 1792659036.316696,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "MS0",
+      "value": "31a8afe45e974bc5adec3a25ce8467c9",
+      "domain": ".microsoft.com",
+      "path": "/",
+      "expires": 1761124836.316911,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "MSFPC",
+      "value": "GUID=45fddfb8d94940dda14673ce451ecfb9&HASH=45fd&LV=202510&V=4&LU=1761123035149",
+      "domain": "login.microsoftonline.com",
+      "path": "/",
+      "expires": 1792659035.320581,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "DT",
+      "value": "DI1-IUJMfQ1RC2uyZSi-Yoydw",
+      "domain": "dayonebio.okta.com",
+      "path": "/",
+      "expires": 1795683046.249852,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "JSESSIONID",
+      "value": "143DC024469DF5E0343605582481A105",
+      "domain": "dayonebio.okta.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "idx",
+      "value": "eyJ6aXAiOiJERUYiLCJ2ZXIiOiIxIiwiYWxpYXMiOiJlbmNyeXB0aW9ua2V5Iiwib2lkIjoiMDBvM3V4bW1pY3hOcVJzMjU1ZDYiLCJlbmMiOiJBMjU2R0NNIiwiYWxnIjoiZGlyIiwieHNpZCI6ImlkeFE2enlyQ3YxUnlPdU5aVWtmWFAwYmcifQ..cY8MAPvsjFon9xTG.WE6J-UvUpjogPE6UlmSbjsgA09jMqYXCR-EagHT0NfQPgC2gy-9mqR_58KlIdT4mgSUaDWAmx-ZyP0VhlD1TIC_vrln8COtJ_yTpyWw8wsiy5afW-QXHU9MqPWi_gMtUpdldXhfBtBdbCJgRNFIjDyyAU9nuO-zDmhJQIbtpZaHYCC5QNXk86lXq-NCo0LViy_VRpLl_rpEpRpB65cOHQZvkoQ_nCe_Dl_XUcZcE7fnDA8UjfrAE3QOK9esKybsbfYwUl4W971e8FvyoYSoMl2DiMxuUYzWB1XHm1WTyixHwAR9kOufnz9brXp93aCexhTHBRE5CTihhL6iPvVZ6nOHyWnGMKsgY8ZjtTKeyj8lLgYsDcnnfPkgxHa02z3p2aoS1zYLgMONoy3aysZh8Xu5soT7P44qy-MmZshRIplAKlzpFGnhej1doeflh-qmTQ-9hUhCdQRZJWgf22ncnMA-Uv5uS9gqGHdc1ihpbagdHDE7J6Gr-jMr4ciuWfGTT2s4pbsGvYpFTZXqz3NpUUF2v5lg5ePuFFSAcWDw6xKKwuVhsrrKHcuJzb-yPJ_0MNzJMi8MF6GrDtjVWyWdSAZW4MT0c1YEEsyaNudk8tjlde-Wxe3wXoYMfbZCeHwgEbKrlCcUQmBTdnMUmNYjhyF1LfqKCtSlDRSMzQzx9CSwSkfnCd3R7vED9X9xX4iLtefGXfd2ab8OXTnfqsUvyb6b8uqlYDZwiYC_mM4xhO7mLKTXS7tikbIGUeeMqzEf2ATWSW_zGWhfhbDSqh3kn2HO4jKVOq4DNLiMxkmL7cYLrohMavFP84zruzydwlBYYz8lmdyTgjj4e4esnbNmrgqoCt9nyTPcZrYrse_gmbPMXZm4sWOmyNNoRq-LtyMwCZqn8H5d3mDuyI-sBC3D_I6HLgOPJRlL-_Y5FAEUv8nVaO5PIUICngX_UxoIV2Uy2k-PEWXIfIrVHt-qItVEnLnHgfnFPTYhPFwJqQRRUIzBpSzGOsRJQaLYCjlEHIgwwbOYUQpulVL4ybgPZbq7eSLa5T_WpfsQnWq9WlNBlA5bE7m7aXSBAdZy9TTdTqh5jhgGKrDm78oKVXy-acJJUIi9mz39vV4X_JsTRpkt1sakV6wLQf9YaqpQ1d0Yi89HAAMU.ld6ZdG4F-Z7yWkuLz1KpkA",
+      "domain": "dayonebio.okta.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "luf_363036583",
+      "value": "eyJ6aXAiOiJERUYiLCJ2ZXIiOiIxIiwiYWxpYXMiOiJlbmNyeXB0aW9ua2V5Iiwib2lkIjoiMDBvM3V4bW1pY3hOcVJzMjU1ZDYiLCJlbmMiOiJBMjU2R0NNIiwiYWxnIjoiZGlyIiwidGltZXN0YW1wIjoxNzYxMTIzMDU5NjU5fQ..qwP9qxWtmXTRhrah.qXoT3cw0hH6kGsbuJkwiaWqJJI1G-cMJmLYr8NojniA7jBufWmE2U8a0yaTU9alNaakn2aXd3idAtfh5nq4ZwNkBcfdeUEjsfmoFAWH0bLlNU0_sJQjXWeesTEoA2psGwzXhAAWLNPdSwOOqoQdchZK4ifx0jy61ARey6AivseDvyhmWKw_wpav4krI6wJ3DRbnqiDRom7WuG23XqMoVXg30laOebGZ1h8Rs3FFw0EvSA_FTZWwEzEVEU2Vr0GQhroIy9srqnVSZk2NeLkSYarfZKmpd5_Y3Bk33f7NCZmbo.bZq09jCaIyaTxvqXb_E6Tg",
+      "domain": "dayonebio.okta.com",
+      "path": "/",
+      "expires": 1763715059.725255,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "ESTSAUTHLIGHT",
+      "value": "+009bf9c9-f7f9-c0a9-8abb-4ffa32c7fbdc",
+      "domain": "login.microsoftonline.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "esctx-DK3x2NeTNI8",
+      "value": "AQABCQEAAABlMNzVhAPUTrARzfQjWPtK4WrnCHXCUcGikHPcBJJcdlJ5Mo6rDw30ncGlasYFbDWRWHIGRVJs1iVkBfmB3RhP-WmOXsIdyYt2t73R4oj7ytdn-bUN2WkJVc9h0tsuU1LhWmenpw8rtbTLCEYqAAnF1ctq6ODB3ufcdfHVcQ2AxiAA",
+      "domain": ".login.microsoftonline.com",
+      "path": "/",
+      "expires": 1761124561.07308,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "p.BDId",
+      "value": "74c12b9e-7f3f-487c-a970-90affb96f8d6",
+      "domain": "admin.microsoft.com",
+      "path": "/",
+      "expires": 1795337474.412981,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "RootAuthToken",
+      "value": "AwAAABowMS8xOS8yMDI2IDA5OjU2OjAzICswMDowMLQJMS5BUzBBanduMTJZZ2dZVUNlZGhIbzFCWktMd1lBQUFBQUFQRVB6Z0FBQUFBQUFBQXRBSDh0QUEuQWdBQkF3RUFBQUJsTU56VmhBUFVUckFSemZRaldQdEtBd0RzX3dVQTlQOGtRQlJlb0YwWm5MX3k1N2pFcFo2REVibEtwNlZ2Y3BraUN0OTJFcnZ2WnFuRlBiMGZQV1lGM3ZIX2xYQ2VHaHJNc3RBa3E2VnFpbHhUOEVRSXBsZm9oT25wWXZtaE5XelFxUVp1dmxZZDMxR3YzY2wtVURKeUlsbTV3Qy1sd29Fc0JmcnhyTUFIVnd5bnB3MmpzZGZQVUxjTWl6S0h2bWE5anJsZ2wtanJSWVJySlNNbVFqQnVOWXMwNFZ1VE4wRElMVHFhTjY1V182QkE3SnFsRGRQajNSalUxQTJXX2tBZHJiTTNQZ0U5R29XQ25iaGZCVFgtalNfeHJUMWNhOWNuSTlHVC15UVdRRGREalRPeFBpbl9MZFRsakhrZ19nNXhmRXpOcF9TMUdHV1IwWExrRG1hRkEydnhOdlJiYkVQWWN4dGNiTXJCVUg1ZkxqQWRjRnp2eVQzUlpjSV8tclh6a1ZNemRHMzBYMlEybU8xWjdFS3FrSzY0YW1IMzBXMHAyMU9LUkkyXzJZWmxNckUwNmk1dUxxdy1hRFN5Sk5ERFBsczhPXzA5Rmd0OTVmdkdKQTFYVW56M1dJM1BIcFR0SWQycl91RXQ5QllpV2gybkU5UDhZQWdRbFZsZHNPc1pMczh4ZW94cXp0d2s4OFFMNGhmTVhtS205dTFGbDN0bV80UjV3MnRrTm51YUVEVkp1Qm5ldjZfaVpFWVB0OURHVEpUN3RPcHlzVlFnSzBISjYyOVV4UDhHM3d2WFowSnVzdVpFN0tnYzBrenR5bWc1TjJzbVRaMmM2Wll5cmF4T3FRS2hTa2tOd3BucEdIWVl1bFZxY2JkQ2U4ZWlITDViOW12bEdxWXlqNkFjaWI1V19oLUdLbHVSeWw0VTRNbFZyQUZkZVRFRlZNSURRQWlES1pGM1lsZnEzNjhaSTNjY0hzMXd6dUFDYXEwb3FxREpyQmJ1R2ZIZEtkZFZseTFRTEgyZ3FZekNPYXBmUktvMlRocnFhSk5femhCQlo2U2JZRDJlbTRpUm0yZlRFRTZtOHNQZEVIbkE5aHNJNEx6WWd5U0MzdGNfOS12M1dsR2c4SmtMLTNNSHpaUkdZM0lVRVp0NlV6Q1FHd3lFMXFaWjV0NlM0X1dOMWM1eDFHb3J0VDctTlVjQjNVOXMzT0dwRmR6TVNodHBDTEpWbkFqdGdJcVdhdDltdVNXTGZYT25wMUVqOVYxaEg5NmxmWDZVcHVhV2p3Tlk3R1NKaGhQU0l1Q0U0MWszZGh0LWRjTy1jMHBDeEtMRXZ4eFZaVHdHTGlRaVZIQkc5dEVHU2NqekdpXzEzdTM0WW9Ob1JqYndIZkNSR2dkRjk0b19adUFFbUpFYnQzZV9meF8yZy14aDVXZEVmWm0tRV9vb1c0aHQ0SEJmakx0T0lMQjFJZ1NMZlF2SW9jbUxwNk9rTm9zc2RHdzlGR0lsN0N0WTdkVQA%3D",
+      "domain": "admin.microsoft.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "UserIndex",
+      "value": "H4sIAAAAAAAEABWNOw7CMBBETfgdgI6adsOu4yTeVFScgAv4twQJnAIouD128UYjjWamUUqtCvtCU%2F25iDqmz%2BxyG%2Bb0zfdLdL8lJ%2F9Y2rC81iU%2BaNQ9EILWN7RTTxN1deAUWXpkK6DRWjA4EHAaByBKNhoajNOyqQfbytU932lXe4jshQODjMIQ0DFY5z0YEdfpMIqPodb%2BQ3lcTa4AAAA%3D",
+      "domain": "admin.microsoft.com",
+      "path": "/",
+      "expires": 1763715074.41301,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "OIDCAuthCookie",
+      "value": "Mdb5kHrPjg0deQ4xs50fG8jC9vOwsc5Ekj58L6CLYa5nmQsvihEu4bctBp7lGS7TmvIAj0E0ERDlnAfBkG2Vo6TD7GHHGrkxKdczBHuux3PKuajWHuFvTz1Rpyn%2BnBhO%2BKAhX9QSl%2Fb%2BdDoSHrLAgXzMBKwfVLw8XDJcwh7KVVh1Qi4I3xMwLO1qmW0T3QXcy4wtdlGs7gT%2FSYZiG77tBxvhAUlNveBWMSqJYthrxojTvfLeip2nWVzt2%2BtF8JRL97Xbr%2FK6vNaKjr%2FpqqoZlKLTPIDgBwUqryC5dx7RBa9d1zETlirzMnxK8fLRnuL7o3UvN%2B5wLlx5jJ1lRXy%2BvZAxAOOYPAmxqYMwC0FEB%2BtL9b%2BnQpuj%2Bwp%2BYjPrSSiC6msFE8rSiA3IO9i8QUOHmLPN2RshKaPDOEopdpQ8xSyQuHcKGtGtGejrnDefCGfpZ%2F0JIfubv3bQ5G90HXQg29RmNehcFrVrqkcH2eK6NP14SHFURBPWIgUQMVhpdkzgE9zcsdBmJPxB0RhsBZjyTs%2F%2Bc3q7KVyOxxnpwhCz%2FO2qxX725JVh1wsM2IX%2BZSEpf3YV3VHFkwX4OCCLO8WRvvtMA6UdnRs0A0RSuccs0JvCjjUfZEnCJN33DpSZSuPGfdK3qGZCzlT6u2gqT52aI3jrffMXHXwrjh7Irmfbe5unQjaFp6pck%2BfvhzD1cVxPN3i4QjBVe%2Bco8S%2BhTtCpKJ2EoPVRlUckA39e5bjvjGyQ%2FCBYt0ZYuQ%2B%2Bn%2BmHnj9SxYm2H46Z0wWmoDw8VOEc6YoyplR4X544AtBeL%2B943wN0sEKvfLHumZZPIWisTk%2FLVqmLB5UIcq5wunkGNU3Qq4fPYEXTl8HN%2FiiSlbaNt6XouFmwVBfjhK7FXbVViu80U0AZf6SazrVMWWAvcGniZ28j0qTwuJ3HvCpMcw3ze9ODxzvt4gZ98aeGcQ4k5YGFAdI1g8fibE8cJMtekx6oDDIu2w8tfJME9di9H1%2BJSfhhy%2FFz6GBTYXjy9HO8QMmNho%2FW9KuW1ua%2BjZmJv13IghQ2ddlBxpYS8Am0JeMFyNdvNiGkI90jUhNimYjUUBb9%2B85EU8QZY2Ig6YHyHCkZC4A7XdE2wdH%2B5GFr4eqSvm1w7vBBbg3AEEcUm%2FEgYcM9SsY9H1HJWqQjbl845k1plqPQFm5Eu2FkXEEKzZeF1YdWd77umkGIwJASNukFHKHYRac1v5KqE6b5TiJ5KLuqcpJISBPI5yef6yA7EPplG3ul2phXDDDjlvNxE3othK4gzyZ61qUjz4EB1j3OxS7tCuz3s0q4ofUcIT%2BSVFVwUgvZ9h5CjvIaMSa2pzw%2FHuY28%2FvYdBoDNSmAvJwDYFwFT0jeg9U0CUWyUdzx4%2BlTskT5W4qRdVlm6ZQ8yHJylBhh%2BNBfY8rLoIO1RmQ72ki%2BysFWL6hG%2BemKbrF5KWrxAJxRIVCCbEfhW%2B%2B6twMuZDHWhHteNCcZYbfyApYHhuMpN%2B7DtmADqWWUNObdpXt5lFA5wDIfjv6jeqUxKuiTSbAiLZw2X2yzpXV3SBOx180TFLLZ%2BoPMcw%2FkUvjfOR7vgLNwBBfXXGcjnPA0cXIbj2Xj85d4O%2FtSg7OErRnDPlILsK6jzZNaNMfLakfwzqEReJh7CJomq%2BLYb4Yi0WK58cb4jpnyAtzoZs1lH3pMHh12xtrui9UAkvXIgleo8SXiyT6cY3BXvIEqAHeGm6eNyom7NPZGG2GtSxCy%2B9%2BdC%2FtSr63r9hoJcFaETD0LbYOFuqxFPwM76lVONiR9NSqs5Bq32qCu%2Fh45njqgEQgg%2BECIWbf1KngRvLc2KRlDTwnz6vOJpLQ%2B8NZaaW492Yq%2F7eE26gPWwnE7aQlNl%2B720VqIciXaRwvDCKD5TKk%2FYnFr%2Fd2%2FgAwZuJbB3twzJnIW0TZpzUkrqc5mSxzMLrwJpG%2F0sfxVGPxMOgjL3O5QNQDh%2BN%2Bos0tlzJi7WCVQwVpM%2FXpW7wz5ptcI4yC82Gdw7e7aNy9RAw5dLvK7FpODBuq4BrsfxsOEpn6yFTpOiLER3BiF",
+      "domain": "admin.microsoft.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "s.AjaxSessionKey",
+      "value": "063SMO5ETEzIYZ5SCVyZ4L6IWiWM%2BW7eRa0X1EFWhhPIa2AqYgEue6KhSCBpt%2BlQt0tEWCTeRrpC4l75yO%2BL8Q%3D%3D",
+      "domain": "admin.microsoft.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "x-portal-routekey",
+      "value": "wus-uas",
+      "domain": "admin.cloud.microsoft",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "UserLoginPath",
+      "value": "%2Fadminportal",
+      "domain": "admin.cloud.microsoft",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "UserLoginRef",
+      "value": "%2Fhomepage",
+      "domain": "admin.cloud.microsoft",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "esctx",
+      "value": "PAQABBwEAAABlMNzVhAPUTrARzfQjWPtKmmlnruDClZMKftLoSoWSkh-EV2A1e1N5hX2yDv1l_pKHTVo3w9bFVBzki_QPAZ55_Dft70gEL5LWCbGJhmdOXCmAEPfKsQw6h3j4FV1-fKsLYWxWR9vnI5wQaBb429XndKakySgvbsv3r_hB-0QqGwUJDFQreKopqDLt8CR3rIwgAA",
+      "domain": ".login.microsoftonline.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "esctx-V4s25jK3BJE",
+      "value": "AQABCQEAAABlMNzVhAPUTrARzfQjWPtKGeC0rylMezvfi4fuRGpCQFDEuanReOIKTAH0__-aIiICfOZzMiyEoIzglP7pchPi5fWCd3AXB8HpmH2yfSeHZAXAZNneDhCNsYcVgCGNtZneom61optCiD6Iff_J5U8efYa98ih7GkM1u-3ZBS2FrSAA",
+      "domain": ".login.microsoftonline.com",
+      "path": "/",
+      "expires": 1761124574.77146,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "uaid",
+      "value": "a28b43ace08b4dcd87cd8626e0ceb3ea",
+      "domain": ".login.live.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "MSPRequ",
+      "value": "id=N&lt=1761123075&co=1",
+      "domain": ".login.live.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "CCState",
+      "value": "Q3E0QkNocGxkR2hoYmk1amFHVjFibWRBWkdGNWIyNWxZbWx2TG1OdmJSSUJBeW9KQ1hkOHFzOGpHZDVJTWlvS0Vnb1FCZ0FBQUFBQThRL09BQUFBQUFBQUFCSUpDZUVVN1BPaUU5NUlHZ2tKblB5SUowZ1Iza2d5S2dvU0NoQWwwNDFoOWlOdlM0T0FUZmVBSnVPYkVna0o5a1ZUOWFJVDNrZ2FDUW5oS2ZVb1NCSGVTRGdBU0FGU0Vnb1Fqd24xMllnZ1lVQ2VkaEhvMUJaS0wxb1NDaEQ3dWx2Q2xhZ1NRTHFsSlh0ZHNOZXdFaElLRUVJcjl4L0kyVWRCblg3WFBHM0V5a2thQ1FtcUovVW9TQkhlU0E9PQ==",
+      "domain": ".login.microsoftonline.com",
+      "path": "/",
+      "expires": 1761987080.736745,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "ai_session",
+      "value": "uBBfYDZMfGaLRD5LJiW/43|1761123032345|1761123075624",
+      "domain": "login.microsoftonline.com",
+      "path": "/",
+      "expires": 1761124875,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "RootAuthToken",
+      "value": "AwAAABowMS8xOS8yMDI2IDEwOjE4OjQ4ICswMDowMKsJMS5BUzBBanduMTJZZ2dZVUNlZGhIbzFCWktMeVhUaldIMkkyOUxnNEJOOTRBbTQ1c3RBSDh0QUEuQWdBQkF3RUFBQUJsTU56VmhBUFVUckFSemZRaldQdEtBd0RzX3dVQTlQLUZ4ZzNZZmtnY1g4Z1VSQUk1b0dfQnkxamVwUk5PSTdmdl82N3NZMTZ4YmJUX3llMTdCODJjaXo0Rm1TZ19Sa1ZHVXVZWVByWkxWMDRGM05wSlpTNm1WRlRkcG43RERoanlFRElFQTB5bmRobGt5OWp5d2ZPX1pZaGM2TGRSeVN5eGJEak9BY1BnVEgzUEZBQ0dTUVVMOXRfcTJUb1RVcGtVME15TEl4M1dnLWppT3pOUEFrTmRUV3JXZ29jaUZrbGR0eW96TzFpTHhsTk1GMXRjMWdqXzZlNXJLcG1vZXZfTlExczBWanNtMjR6THdFdGRaNkhaYUtJQnJXb3VENS1nMVlQNWlyZzJXYWVUZHF6VmVCOHIxWDJPSk1tcHVrLXpMQjllYTF4YVRNU0FIOTVyRndHWEJmTm5pdUw3THZvaDl0QzExTHJZMDgxM1FNMlIzTFZKNUoxQjZXLVVhdXg3eFBpY3pVVy04U2hWQ0ExazhDNWh0X0dsMGpzbkNHNzBnR0ZmVzU3dzZuTzBZdWhlYnh3YnEwcS16eXdlZnhtVm5fbjRwYkc3QkdTdnAyYkxNc0NRQVBQUld3QUlNbnJ5V1hVSjFUTFFTQzhGSFhhT285OUFNajBjLTgwSFZTclM4TFRDX1FLQm5CZ2Exb2JaOGlvQkhqVzg3U2FIcDU1WWpJZnRHRG55X1dydnhISVR6M2M0YXg5UWhGRkRZR1REcHhfTWtBNWpKdFMtd3RwTVlQemlRbkk5RTlRRWk5dVN5WGppSmhrVnN5Y29GUnVUVk5NVHZPdnBhc0IwQmd6YWJVVFNUNHhhQWxhel9yVDJObkRiYWJENUhDRkNXelhoVjdtaHZmZHltRmFPUE9ZaFhWRVVuLW04X3BEWkx0cC11SFFtM3k0OFljSmQyTk0ySlNfY0RtZVF2VE9Oc1RaNEMyUjFZaXhYVXFpNDRJbXJuTS15VkxGQzE0SG05R0tzT3lwRkdIbkxMQ2tnblBxRnpQc2pyR1haMnZWaFZIeklYeXNWU1lOVXhQWkxtR1h5MkRGV3llVWFURUlieHpyMm9mUDFWbi1VSXFmREZtMklRdnNtM25uNmVrUkFncXV3WmFaN3VGWk5lWnlnMk9YVDk0MENtY1kxRmRjYmFNMnRINy1wOHVzNmJtQTV3VTZhYjhGbFZRejlna2RhTjNMNWN2N29QS0Z4bTZQTUkwOGZydHlIUTFXVlR0aExxdEpvcW93UWtnZnd3emdDREJnRzZiaEhqcmQyVi0yRGxKNE5mTWNqODJaZW1vdHR6akdWR05aUzA3emJYOXlGci10d2lpVjdwRTRxcFZubGtXR09ZZzRxV0FqeXpqX1ZVTXVUMVdya25ES0hBMUNjVnZwOEhHb1V3THd6SmhPb1BHeFI5MG4wdUNTTmwwVUpmYWl1N0pLa1BYQUVaakQ4eGpzSGNNUEduUQA%3D",
+      "domain": "admin.cloud.microsoft",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "SPAAuthCookie",
+      "value": "BsSgfSJgjwTaL88BnB3OhVNvs6EzXaM0mZxxkdigZE0GUY-cXNxqgwRVcOb9Tu2bjCl2FoYEtU8JLUWdpHgEvUfg871bYwDVuPceS7AELE3B_cR_shy5ms_-GZtA50Yt7_thh6FRuz-iYN32T7pLXIwNUWhHkvMcsCp9gKLXibHCCLxbDDQIrzzV5R3U_3D1rH6HNxdKMqk-6hK7Y-qbTMzX6rQjr0COuwXZd6LjtMCa7l7Oo9nKkXos7F9SRiYBbtynmrVVsR4CELeyB796QO_l5el3bejZhnRFcTVF_0062lCgwLGUCJ7waTBFA-ZPn79YqqUX9RSbKIrzBfmGrVH-D10bWjprwEbP9cgZifQhwIqeX9-DFsiCZeIuJLJs5t8SJNwKhwD70uhd0E-gGg1HnMwMJ7Jbvl8FO9t-oJKATuipjTSQzEOfqTeKaabi7Y4ijm1FZLa1t-rwJWM34HxIKGjNUdrSTxfcDHI1YcVHNd_8ZmJvhbnKPlVAG8He-45k-NfEWusBlFSHIh-UYKifI-FbCA40EziHrZIVRp7UU1iQHsBL1UAmaZZW7hdxfcYKGC_m2GT2u3Oo4nHdvI22dJ_q4Tn_ORz2FIwQlsfXQr3q-6vSF1BrFl-YnKgVvErKaOsKjC5ckg6LAQ6U6KOBnqK-FHW70XJZqFn4PaghgRPjTk-6DM_3XHJjDSfdct7xEu7fJdK4zSb8oBXprsr-MltiFsncej5AD5hAd2PmM3lsQu2k1RfnVP9TUbx7q3XlZ3ILTNDbcmqLEirAIKzu4xxbjeHCfUDIDe35q2H6fuQ9mmTmb1_ucK6MGNuXcRXjTDfDk7a9JqlrAa8zHMClwm9bdRck-yHGMOvSe8w47MCNcLcFkrxrgvefTu_8MExRraYVhgtK2IIBoA1f-VG3Lc2V3gG7sGv-7kDZOR0Fp1QJHZv9hwT8BAY5Wt9lGradFfaZLmZETvLfkrc-K2cIOJ2admfWlSE_oyVUTcR7dEDx7BhoaMRObJXbgCJA7jSDzsyZv9hO5ABE_8Jk0_1o2FAJ1sVksK9RFtisNSmkA8aEMxAACC7HyvYtCeEIDkgL1vfhlKe5XXlIjP2OsRralCG1UUeW6EclaeZr9FlULGLOra46L2kPUWwgZWjkfka_ojnQANMEWwIjd7-qomuABpeE1yBxW3AjWGjsO0rcu7ls3ECz0jinK3MhX3CyqZEupMTQhbPCVZKhjw3HHFNihisMOcOqzGYutwojAC6XslSoPoefPI_o09C3cTrJPEktwiYNbXpLQbm2y0TFzZc0MXYulVerKGXFPJ9pKG3U3PknjxuezCt0mZI3KkCftGdt20nP5g4rQ75DSwD0tM9ztbQrvtkP7U7XFTsOpc30u6thSkX2xNZH4pS6ayyR",
+      "domain": "admin.cloud.microsoft",
+      "path": "/",
+      "expires": 1761123676.108676,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "UserIndex",
+      "value": "H4sIAAAAAAAAAxWMyQ0CQQwEh%2BUKgBT4WtjeOewNgAhIYC6%2F%2BJG%2FxLilkvrR1VsI4bS4Lzbvr%2BA5Lx6MnIAQmD8oR6KDss%2BeQy2higGjCETMBDpLBqIpI1KOle3iL1fnXb%2B%2FeXMPUZtpV7BiCh2rgtTWIJrVnXuxNrprfwsdRNSUAAAA",
+      "domain": "admin.cloud.microsoft",
+      "path": "/",
+      "expires": 1763715076.108692,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "OIDCAuthCookie",
+      "value": "4Fu6_lU6S5kE5lUSkadk6ta8xlO9qD-DeQyfY5i4cZC30M7RIOG_0vF2Xgxw-aNoGLa7qBPBvoCQiWR3I-9nbC6CjykF9kxYOhR7o-f1J6Tzf5rlnAi_RZhKOnFK6ZWIQpM2dT3Y6Ss28pSZOT9IOHRd_09nzXJtU0mp2hIPIf91aWEkQETu5W02gQXvftbghFCf74dF2zsA68G4XQ3pD-ikC9cC6p_FsmF8eTQXptW3FqjT6D7zED-Nd1XHESc1rWSHhvms6z7Dtwl4no5RFVtmWwxhwDjsLiBguhMyDNKNRliseJgn48dv8QOnpDXtGHX9pNa6nlmgqjBzJthJNZbpexaqzHNMFUStnb41EUftLuZvz2I99TFP3AK_sQZ71kAqrbS_RL1y_yaoFJ7SZE1kxbRCZ8xAzm4pFJ-HbPyce6PkNfBkoD2cFHRRh60qFqFMNueKCB1aBlk-AY-vmeuk0aCyGgcephgCXiwRTGimC3xNapkV3CgwQdmXo23J0KEX7H2H3gv7LiCCp9lFYp0YQf1cdhLzVfVtWDLHIdH1GiRW5UpH8OFkg5FIO5Jg0Ma0fIxrfRfbTdPo0ka3xwrgOdiqMj4lH0UBQqljrZAV-K8I-x5zKfMOW5Fl9QKCSsX5zZ9HMPpLBilPSN6sULuonDM5B7NcXtIy0SWBB7G7jEo6C80T1VMamUE9eZknU5CilODcLjKkew7q4BHMo-ImkLb_Cq1gcO8j56pAxJ6a2OnAvBfLdDYdDO8iCZlpjcvZoXeQQJb9py2MEoveDc5bgyx5YONHd-UYHpRGZTo4yAkpCb2ND2SUJFQSu7GUlpROKPKXV0cSN93criJ-kHnpGD8J4b8AVhyT5zmF_FbEPl-A28bFntyxWyPb0Kt7jda9bOzrmb37kQf-JQyhgvpp7ZNFI1Duc_jrzLoZVg8Pe_q-pKBc3AKBygUjdw86JdUYNBkZDIWNvovQFWR_Zm0oQIx5-hH2CjKE0k16RDfZWuMo3bduj3lotMQLyLgyamH2MfX8-DYAjpm7qG7ApMs8XOLcCpWa-yLpUGEN9va5kHeTospxNIyP6Lh_GurEHCjTG6R3f1Mnf0xvYx0sc16NLDV7XE-ajiL4SbCHAV1LfCPdIgwuE-g64AUWNDfxuEu1jpkN6l3GInif9zMPnXpEPN3tmZvzTduPn4rHQyV8AAxFazGwRcVS7R-XtqhPLefuEdcqOkcAq40W4A9bbdGVwbacdhyaZ44OIzo01p_jdeZS3avN2caK3eTsNxx7KHIBc02xZ2y2l54qkoHaINF_saJeJ3sGSf75KGnKEQbBvhykweEJ4kC83JkPL0w-SeVdEPCbIBcz0EwHRR1UCgp7-htuVKXSU0vgGnjmR5hdFRosiLBPmNfxEBQ0KYRqXzC9Zez0W8zbaiXIoKeE2VXky0hcc1iL0wzkt404GfLMtOTpcSgHuF8W4Kw58iCLtftd6gpj8ICnzd0G30sPTc8hDgdUSYZTCihPXToSaIv2JbyiKjYAfTm00Rdi_MlXw9y47bpYi0b9DYYxnxv_4i-o42FeNkHhac6l5fzl_PZq7VT4PMDibgYll_02kzUctMLtKStvC6oYKH5dN0E5owzBPiKqzCybQfiCLu8Si39ML63QIi9Yb71JnGNMWhRdX20AY5WzreTZgaSAWw6JIdGg8FX5Rz40S1Ab4Onocbi0Lb6ixrX-D-7giGc8APhBRPctZ6qWW89gcOCQKePsK8llShVQFBpZ_osbQRSx7SuA_zs8mKrVH5urmTcpufO7crz5dSq5kdqyMhbPl9RsxVFzlRGtiLvqeK4vpVvFbAeU05S3RbRYQ3cF2Z4pMXSAMTjy6HSsGqNvfXleN4zKbNllno7Gqcn8ijVHuSlDvOwGkH0ysXZEUPwKjpkKBmakuc4lqW98DlyDUggI38eAXx_VbGwqoOlObNsH0UJI139GoyN9uk0Jq26nYqHjWPP1-YY7_SLZbwttK6jaYe7Oa1F4k_780OrHGCCA23A22mAV8l397ElEACIzQMVU1llfG9ADVcMiekUgM15w-RqKEl6eNkFxQ5iH0IeWQmUdsSXKputPlyktv3UCI49zUsLuaxOLQYckzYyG1yK9mr_sReUg7BwGbq_nlbE-YPNMnSkSWLP0VAlcryOZ8YV6NZ-6blB9F5xMqgpkMsoEOA1JYgYVnfiw8fqijZIzZhs7xxu9LQXufGu-0gdbC1jTTka6rlzFDw5qCdzXSblzuQdjuvgIkyB2fH-vUC0QhF9COa_gm-LT89uw7yL8MjonWD90kFgyOsOKR2vSztPOVECvCYfYuCSLq5furhk_-KEiFNnL7WGTnTzPx309i1TX4aQIFwAHAar98VLr92nR0Y8wykCeEz9TUTXJqvfkdseGL51m8dbP0l5UggkuQjilcRw4WlTuSR04Nw6Iaqbdl4rwa1rNajSbjBv_XmafF0twiSrFixvsYmByOMjymAk2MVo40sHyXPjSqRtGjd1ZJVssZaioHOFmYJ7kecM7I5q8Mg2CebtTEJI97gn_iUmVFkyjwi439vyst2Nz3s-BT4EQAXAQbvAMJqhVvv-zIiboogie9sg_XVoVImVm8U_2jnshFVfH6SHvstqYJT463IW3msOxzMhc_O3Z2jwJCt9lE4XrNSHpx4fx53JBSbWcaeGthxq42luhJ0yYo4Npe83mVpq6qlurWgsElowAaaQGy61A3GdtyeZ3IggqvqAz1xhTL-wjjYoAxEfZS9xJIeLvQrwSyUwoypIB6aADYT2cLlW2WgLOen3U3qs6skFdRdDQRZCRzsO3oCnczcsxyaDc7yBhpZ4vZ-gwusycVkzenqQQM_ONVJer8EzTAU044hwJ3XA65XBtwiwXAB6kDHaaJ7sBC-lDBVLmUe4-Gi_XuAMx_gfUSmp8h5FCXCxXXVJlviyKtiAt6FesUpCoe6lkTJr5_2JGwNxKFIUFgKwm3Bk_AbIYJb3UTaEwNEYQLyyMW19jHtBfpqQGAXKMEu6aUaVx0nM-wx6VcUjCMdFYj40xoqePzy1KEAs0zoP1X6eKnouUBKNTAU0s9SfxzUH_-farALVPGqXEtxW8WX3lc2s",
+      "domain": "admin.cloud.microsoft",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "s.AjaxSessionKey",
+      "value": "86%2B956wDHt5dF1XVwMgm4hEhmyNYmYEymgWnA1UkgJiOK9P6lPjdZqGM4%2FZ2cfPKGGdhzBZi0%2FJbfaGenTnirQ%3D%3D",
+      "domain": "admin.cloud.microsoft",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "s.userid",
+      "value": "10032003B92DB598",
+      "domain": "admin.cloud.microsoft",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "s.SessID",
+      "value": "b47e1946-33dc-4a2c-8842-3b173598e854",
+      "domain": "admin.cloud.microsoft",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "s.CURedir",
+      "value": "True",
+      "domain": "admin.cloud.microsoft",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "MicrosoftApplicationsTelemetryDeviceId",
+      "value": "1cb5c617-6382-4b33-908a-37ab841d6295",
+      "domain": "admin.cloud.microsoft",
+      "path": "/",
+      "expires": 1792659099,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "MicrosoftApplicationsTelemetryFirstLaunchTime",
+      "value": "2025-10-22T08:51:17.262Z",
+      "domain": "admin.cloud.microsoft",
+      "path": "/",
+      "expires": 1792659099,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "s.DisplayCulture",
+      "value": "en-US",
+      "domain": "admin.cloud.microsoft",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "s.cachemap",
+      "value": "22",
+      "domain": "admin.cloud.microsoft",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "p.TenantCulture",
+      "value": "d9f5098f-2088-4061-9e76-11e8d4164a2f::en-US",
+      "domain": "admin.cloud.microsoft",
+      "path": "/",
+      "expires": 1795078277.38895,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "s.MFG",
+      "value": "True",
+      "domain": "admin.cloud.microsoft",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "s.DmnHQT",
+      "value": "10/22/2025 08:51:17",
+      "domain": "admin.cloud.microsoft",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "s.DmnRQT",
+      "value": "10/22/2025 08:51:18",
+      "domain": "admin.cloud.microsoft",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "s.DmnSOQT",
+      "value": "10/22/2025 08:51:18",
+      "domain": "admin.cloud.microsoft",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "ESTSAUTHPERSISTENT",
+      "value": "1.AS0Ajwn12YggYUCedhHo1BZKL_fhvoluXopNnz3s1gElnactAH8tAA.AgABFwQAAABlMNzVhAPUTrARzfQjWPtKAwDs_wUA9P9HMV0tLVrhUIvowKRdoCYFdFlFW98VBeKvbZoao1lkktDoT6DH20ks7DiigDXYuj5fzHWKPAlosuNTabvuRLWud1l31oRb6XrgPP078E0DHC-LKPqItwT_rCnEwjIDOuCuMUu1mkLNy6tzUvSq2vQIS4f_ewSzlCwK9xkeKYhjsjIsCLv_-nwaW4inggAxhYwI9-px1Gej360yjyub4yZI2jPyD8G_gr2cjwvAgqVciL6pvPnYVjFM0oCxQInxxa3Tz56UzExnvBvHU-bnd9FzU0Ho4vlaT7qOLX_8sRalp2OqN-iFa2yT4zRZzqJu-5sAHMICo6fJ3IcdlHM4N9ijF9lUYGjv1xZ3ENIX5t7loVzBnjJwPHq94-B8_8Ofa2HmSJzeZqzGfd1Zbt5BylNycxTi_cjigkZ-90k1iqormTeHhXYY_g",
+      "domain": ".login.microsoftonline.com",
+      "path": "/",
+      "expires": 1768899080.736486,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "ESTSAUTH",
+      "value": "1.AS0Ajwn12YggYUCedhHo1BZKL_fhvoluXopNnz3s1gElnactAH8tAA.AgABFwQAAABlMNzVhAPUTrARzfQjWPtKAwDs_wUA9P_vk2hYP8cPktvK0bwpaZ0ed2NgbMl24MDU6iop943JktjAwU7AGWuKMf3NMJt1gr1tmBpPtS1lyxhL0VckBew5b9bY9yOaXGHFvvMxo5MOktFOHMVZgOoqs6Sce3jNRh6jyOZufMnrAQGhIskqRcgm8OeeJOhL4JVln6iUQlbMtmPSzuVDNfa3ChZMsjYlXB5JBhJY2M6zl_4r2cXIE89Txx1LLFCRgjJR-NgWpwKLX0Baen4Gvo4XPum8P9pDGvnlE2jiNtyyclkBInQ4E5YGPhBTkOz-dt7crj-RJqOf_61wtz0gdwH121mXgrykQeTOFf7aGNHX_yFJRMxkQVVTLjKVANTQChVfPq88ybDogGDyUYJXRxOkgv1wVTAPANUU26nkR_czTKwVv_-sT7o5QQz7-W_Pav2FRjPWxai-G6Mwfa1IQvR64zK1RxNmVmmYzUd32nNIonqGDJhcfxjNGd9xfzmFyBftpgVja4lQygx6do52oB91aeNeqcKINqQwBVDgYGrh-wAx88I0k7em62C9_srS4lp4S2xxSh9a_ceomkq_ZQYzwwzcA_NVvbGKvMEkTR_CXdz9Oe_To376UPpgBYOFygq7BZJiMYLdaKU4zjNyU_tjT532k3qe_EzIqKCPF-H1dLAhvd-IsYS5TfwdlwRql7aHD4zUoNQTlP_mwo3Nw9klQC3hA4zEtv41q6PeH1RaWpu3YEjBuBXQGXsXK1S_xouOl8ojyCL2JZwl1Lo-lMXuAbuDJTCdsrLcmdbriAo",
+      "domain": ".login.microsoftonline.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "buid",
+      "value": "1.AS0Ajwn12YggYUCedhHo1BZKL_fhvoluXopNnz3s1gElnactAH8tAA.AQABGgEAAABlMNzVhAPUTrARzfQjWPtKArUEU271MTx1h3fAGOXyzQ4C70d3735s6wugGJtBDb1vcZXfmMo8EW3JNGBtOWDfh_5Vp3YsEFdMoyinz7ZQRwfSRJrdvUtLGoWGk__3m709objK5Mi-Zq_hny3m7ySeP9EsGNh5ahEiZc7cajBzyt2c9-iq9wJ5FXlZOyaAZ1ogAA",
+      "domain": "login.microsoftonline.com",
+      "path": "/",
+      "expires": 1763715080.736686,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "SignInStateCookie",
+      "value": "CAgABFgIAAABlMNzVhAPUTrARzfQjWPtKAwDs_wUA9P-5ur5xdyPOm5_A1IRsMHZYZcamUu0USTQw6SbI6Ylg6FdKCw65wbFNmoj64amwP5WmBakz8iK_WA2giI-oAuIxAaySMIFvelJ4OjZV6wZa5_3hHw7UxEv_-bhlS_oPvy0nptvXcGYvtTAicMAdXcfBrYzY4t0nldYYS_AI5uVhlmBkpRqDJoypUkhLa93SshlYBwOVssiRWTowhaZW_DmayFymIcr5MgE60sTcjUVj8__LR5oCtDUnOAGlMdxr0dj9MhFZ5AlfXeqSV4NLXSMDjc-iR_v0S-nEvGYJZg5C21r45aDGv9SPCLYYU1QRJHkNIL3LqCXQZUwySlZd7gY04TOFgfZqsEYDl0xIEia8p9jb2tZLWw4EYLE5dTKaPOSHpEMHlK7OFjgOYy91ZmIZh5YVLr18TEObS-o0-Kyr_Y9ehSD0tmv34DaK5jkpQkPBoQ2Z",
+      "domain": ".login.microsoftonline.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "fpc",
+      "value": "AjtEv8EzkPZFn4KWz69PxOHBEfbZAgAAAAGSiuAOAAAA_hzDGgEAAAAHkorgDgAAAETXglQBAAAAAJKK4A4AAAA",
+      "domain": "login.microsoftonline.com",
+      "path": "/",
+      "expires": 1763715080.736848,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "ClientStorageCookie",
+      "value": "COfTRf3vsbrXEOA%2BOhFucQTY1szK2M3pkEAG7EAAey4%3D%26OIHUE%2B2uid94Fo%2FZiTOoMw%3D%3D",
+      "domain": "webshell.suite.office.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "p.LastLoginDateTimeUtc",
+      "value": "Oct_22_2025_08_51_17",
+      "domain": "admin.cloud.microsoft",
+      "path": "/",
+      "expires": 1795078299.42355,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    }
+  ],
+  "origins": [
+    {
+      "origin": "https://admin.cloud.microsoft",
+      "localStorage": [
+        {
+          "name": "O365Shell_ThemeInfo_Business",
+          "value": "{\"Id\":\"base\",\"Primary\":\"#484644\",\"NavBar\":\"#484644\",\"DefaultBackground\":\"#484644\",\"BackgroundImageUrl\":null,\"DefaultText\":\"#FFFFFF\",\"AppName\":\"#FFFFFF\",\"FullBleedImages\":null,\"userPersonalizationAllowed\":true}"
+        },
+        {
+          "name": "ComplianceCheckCache",
+          "value": "{\"policyAllowFeedback\":\"Not Configured\",\"policyAllowSurvey\":\"Not Configured\",\"policyAllowScreenshot\":\"Not Configured\",\"policyAllowContact\":\"Not Configured\",\"policyAllowContent\":\"Not Configured\",\"lastCheckTimestamp\":\"1761123079003\",\"checkInInterval\":\"90\",\"policyHash\":\"NDE1Mzg5NDA1Mjk3NTYwMjIxMw==\"}"
+        },
+        {
+          "name": "mssearchux-header-search-config",
+          "value": "{\"7ad39f0d7d30d07b551fc14c4e503896d1bf3b1da793cc22ae0af4fa7921b2a9\":{\"expiryTime\":1761382299826,\"value\":{\"ecsConfigIds\":[\"P-R-1266138-11-4,P-R-1257332-4-7,P-R-1254770-11-4,P-R-1254763-4-4,P-R-1161809-4-4,P-R-1065942-4-7,P-R-1056220-4-6,P-R-1048746-4-4,P-R-1039673-11-8,P-R-1036816-1-17,P-R-102223-7-109,P-R-1025564-4-4,P-R-1016878-11-8,P-R-1004431-6-11,P-R-1003339-4-7,P-R-114066-7-37,P-R-113159-7-40,P-R-110459-2-20,P-R-106802-3-79,P-R-106259-3-80,P-R-85485-12-4,P-R-89633-15-34,P-R-73589-12-6,P-R-71200-1-48,P-R-69004-3-71,P-R-68771-3-77,P-R-62003-4-12,P-R-60693-1-11,P-R-54363-1-5,P-R-45563-1-9,P-R-43263-6-11,P-D-68653-1-21,P-D-31828-1-70\"],\"ecsSettings\":{\"searchux.shouldFetchVerticalsFromDepartmentId\":true,\"searchux.cosmicThorEndpoint\":\"https://prod-config.thor.aesir.office.com\",\"searchux.tokenProviderURL\":\"https://outlook.office365.com/search\",\"searchux.serviceEnvironmentConfig\":\"Prod\",\"searchux.sortHubSiteActivities\":true,\"searchux.allTabConnectorClusterViaAdminKnob\":true,\"searchux.enableDotNetCoreEndPoint\":true,\"searchux.isTopicBrandingEnabled\":true,\"EnablePeopleCentricSearchController\":false,\"searchux.telemetryBoundary\":\"ROW\",\"searchux.enableSharePointResultsCustomization\":true,\"searchux.checkMRTConfigurations\":true,\"searchux.tenantFeedback\":true,\"searchux.useOdsFeedback\":true,\"searchux.generalFeedback\":true,\"searchux.isTopicTypesSchemaEnabled\":false,\"searchux.isTopicLabelV2Enabled\":true,\"searchux.isTopicExternalLinkEnabled\":true,\"enableClientTypeFilter\":false,\"searchux.enableSharepointCustomVerticals\":true,\"searchux.enableVerticalsViaConfig\":true,\"enableVerticalsViaConfig\":true,\"searchux.enableQueryStringParam\":true,\"searchux.enableCustomRefiners\":true,\"searchux.enableRefinerValuesCap\":true,\"searchux.refinerValuesCapLimit\":50,\"searchux.enableCustomRefinersViaFlight\":false,\"searchux.flightedCustomRefinerIds\":\"\",\"searchux.pfp.preloadConfiguredRefiners\":true,\"siteadmin.EnableSharePointAsAContentSource\":true,\"siteadmin.EnableOOBVerticalsinMicrosoftSearch\":true,\"searchux.enableMrtCacheFlight\":false,\"searchux.enableRPCCall\":true,\"searchux.updateCacheInBackground\":true,\"searchux.suggestionGroupStreamPolicy\":\"searchux.suggestionProvider.streamPolicy.eager\",\"searchBoxPluginConfiguration.SearchBoxMagnifierButton\":{\"position\":10},\"searchBoxPluginConfiguration.BasicSuggestionProviderHost\":null,\"searchBoxPluginConfiguration.SearchBoxClearButton\":{\"position\":110},\"searchBoxPluginConfiguration.SearchBoxTooltip\":{\"position\":10},\"searchBoxPluginConfiguration.InvokerSuggestionProviderHost\":{\"position\":230},\"searchBoxPluginConfiguration.SearchBoxSubmitButton\":null,\"searchBoxPluginConfiguration.SubmitSearchSuggestion\":null,\"searchux.enableUserQualificationChecks\":false,\"userQualificationCheckTimeoutInMiliseconds\":1000,\"siteadmin.EnableMultipleConnectionSupportForVerticals\":true,\"siteadmin.EnableCaptionsInResultTypes\":true,\"siteadmin.EnableResultClusterForMicrosoftSearch\":true,\"siteadmin.isResultCaptionsInResultTypesEnabled\":true,\"searchBoxSuggestionProviderConfiguration\":{\"groups\":[],\"streamPolicy\":\"searchux.suggestionProvider.streamPolicy.eager\"},\"searchBoxPluginConfiguration\":{\"plugins\":[{\"id\":\"searchux.searchBoxPlugin.SearchBoxMagnifierButton\",\"position\":10},{\"id\":\"searchux.searchBoxPlugin.SearchBoxTooltip\",\"position\":10},{\"id\":\"searchux.searchBoxPlugin.SearchBoxClearButton\",\"position\":110},{\"id\":\"searchux.searchBoxPlugin.InvokerSuggestionProviderHost\",\"position\":230}]},\"searchBoxLoggingDelay\":0,\"searchux.useLssViewCount\":true,\"serpConfigCacheTime\":360,\"searchux.substrateDiagnosticsLogging\":true,\"disableSharepointInfo\":true,\"enableDebugPanel\":false,\"searchux.excludeBestBets\":false,\"searchux.enableCustomSERPConfiguration\":false,\"searchux.enableCultureOnSubstrateRequestBody\":true,\"searchux.enableTelemetryEventsForOobRefiners\":true,\"searchux.serpVersion\":\"\",\"searchux.killSwitches\":{\"fd103984-5798-4920-987c-c6fe11cbbad1\":false}}}}}"
+        },
+        {
+          "name": "obf-SurveyEventActivityStats",
+          "value": "{\"Surveys\":{}}"
+        },
+        {
+          "name": "obf-DynamicCampaignDefinitions",
+          "value": "{\"config\":{\"Floodgate_Campaign_AdminPortal.719835bd-9541-4b85-91f7-4f8a72a35dee\":{\"CampaignId\":\"719835bd-9541-4b85-91f7-4f8a72a35dee\",\"GovernedChannelType\":0,\"NominationScheme\":{\"Type\":0,\"PercentageNumerator\":100,\"PercentageDenominator\":100,\"FallbackSurveyDurationSeconds\":0,\"NominationPeriod\":{\"Type\":0,\"IntervalSeconds\":2592000},\"CooldownPeriod\":{\"Type\":0,\"IntervalSeconds\":7776000}},\"SurveyTemplate\":{\"Type\":4,\"ActivationEvent\":{\"Type\":1,\"Sequence\":[{\"Type\":0,\"Activity\":\"UsedCopilot_TriggerCopilotNPS\",\"Count\":1,\"IsAggregate\":true}]},\"UxSchema\":{\"variables\":{},\"pages\":[{\"id\":\"050beaf0-2c8a-4234-b496-4df00c79a563\",\"displayName\":\"Vertical Rating with Verbatim Question\",\"questions\":[{\"id\":\"singleselect1\",\"type\":\"SingleSelect\",\"questionLabel\":\"How likely are you to recommend Microsoft 365 Copilot to others, if asked.\",\"required\":true,\"visible\":true,\"availableOptions\":[\"5 - Very likely\",\"4\",\"3\",\"2\",\"1 - Very unlikely\"]},{\"id\":\"comment1\",\"type\":\"Comment\",\"questionLabel\":\"Please tell us how we can improve your experience.\",\"required\":false,\"visible\":true}],\"title\":\"Microsoft would love your perspective\",\"isFinalPage\":false},{\"id\":\"ddcaefe9-744a-46cc-8e6c-5eebc6abefab\",\"displayName\":\"Thank You\",\"questions\":[{\"id\":\"thankYouText1\",\"type\":\"Label\",\"questionLabel\":\"Thank you for taking the time to give your feedback to Microsoft!\",\"required\":false,\"visible\":true}],\"title\":null,\"isFinalPage\":true}],\"branchingRules\":[],\"uiStringsUrl\":\"https://res.cdn.office.net/fg2uxschema/719835bd-9541-4b85-91f7-4f8a72a35dee/ef566dd4-e969-4a02-94e5-6aebb33f67af/Web-AdminPortal/\"},\"PreferredLaunchType\":0},\"StartTimeUtc\":\"2025-01-30T18:30:00Z\",\"EndTimeUtc\":\"2026-06-29T18:30:00Z\",\"PrimaryPriority\":3},\"Floodgate_Campaign_AdminPortal.eb75b2b8-55a6-4505-a7eb-ec5b7c5a9e38\":{\"CampaignId\":\"eb75b2b8-55a6-4505-a7eb-ec5b7c5a9e38\",\"GovernedChannelType\":0,\"NominationScheme\":{\"Type\":0,\"PercentageNumerator\":100,\"PercentageDenominator\":100,\"FallbackSurveyDurationSeconds\":0,\"NominationPeriod\":{\"Type\":0,\"IntervalSeconds\":2592000},\"CooldownPeriod\":{\"Type\":0,\"IntervalSeconds\":5184000}},\"SurveyTemplate\":{\"Type\":2,\"ActivationEvent\":{\"Type\":1,\"Sequence\":[{\"Type\":0,\"Activity\":\"AbandonPAYG\",\"Count\":1,\"IsAggregate\":false}]},\"UxSchema\":{\"variables\":{},\"pages\":[{\"id\":\"51e6db44-1070-45e6-be30-8c14a5b9e55a\",\"displayName\":\"Horizontal Rating\",\"questions\":[{\"id\":\"rating1\",\"type\":\"Rating\",\"questionLabel\":\"How was your experience with billing setup for pay as you go? \",\"required\":true,\"visible\":true,\"ratingValues\":[\"1\",\"2\",\"3\",\"4\",\"5\"],\"leftLegendValue\":\"Very dissatisfied\",\"rightLegendValue\":\"Very satisfied\"}],\"title\":\"Microsoft would love your perspective\",\"isFinalPage\":false},{\"id\":\"7e1d47c6-99f7-4649-b16f-242f263cbc94\",\"displayName\":\"MultiSelect Verbatim\",\"questions\":[{\"id\":\"multiselect1\",\"type\":\"MultipleChoice\",\"questionLabel\":\"What prevented you from setting up billing for pay as you go? \",\"required\":true,\"visible\":true,\"availableOptions\":[\"I wasn't sure how to complete the billing setup\",\"I do not have the subscription ID or resource group handy \",\"I am just exploring, or not ready to set it up yet \",\"I ran into a technical issue \",\"Other (pls specify)\"]},{\"id\":\"verbatim1\",\"type\":\"Comment\",\"questionLabel\":\"Please tell us more. Why did you choose that answer?\",\"required\":false,\"visible\":true}],\"title\":\"Microsoft would love your perspective\",\"isFinalPage\":false},{\"id\":\"ddcaefe9-744a-46cc-8e6c-5eebc6abefab\",\"displayName\":\"Thank You\",\"questions\":[{\"id\":\"thankYouText1\",\"type\":\"Label\",\"questionLabel\":\"Thank you for taking the time to give your feedback to Microsoft!\",\"required\":false,\"visible\":true}],\"title\":null,\"isFinalPage\":true}],\"branchingRules\":[],\"uiStringsUrl\":\"https://res.cdn.office.net/fg2uxschema/eb75b2b8-55a6-4505-a7eb-ec5b7c5a9e38/d6ad6a5f-a50b-44e0-9926-334ba2799817/Web-AdminPortal/\"},\"PreferredLaunchType\":0},\"StartTimeUtc\":\"2025-08-10T18:30:00Z\",\"EndTimeUtc\":\"2025-12-30T18:30:00Z\",\"PrimaryPriority\":3},\"Floodgate_Campaign_AdminPortal.bb2dffcd-fb35-4aff-aa88-480f31acd6c7\":{\"CampaignId\":\"bb2dffcd-fb35-4aff-aa88-480f31acd6c7\",\"GovernedChannelType\":0,\"NominationScheme\":{\"Type\":0,\"PercentageNumerator\":100,\"PercentageDenominator\":100,\"FallbackSurveyDurationSeconds\":0,\"NominationPeriod\":{\"Type\":0,\"IntervalSeconds\":2592000},\"CooldownPeriod\":{\"Type\":0,\"IntervalSeconds\":5184000}},\"SurveyTemplate\":{\"Type\":2,\"ActivationEvent\":{\"Type\":1,\"Sequence\":[{\"Type\":0,\"Activity\":\"DisconnectPAYG\",\"Count\":1,\"IsAggregate\":false}]},\"UxSchema\":{\"variables\":{},\"pages\":[{\"id\":\"51e6db44-1070-45e6-be30-8c14a5b9e55a\",\"displayName\":\"Horizontal Rating\",\"questions\":[{\"id\":\"rating1\",\"type\":\"Rating\",\"questionLabel\":\"How was your experience with billing setup for pay as you go? \",\"required\":true,\"visible\":true,\"ratingValues\":[\"1\",\"2\",\"3\",\"4\",\"5\"],\"leftLegendValue\":\"Very dissatisfied\",\"rightLegendValue\":\"Very satisfied\"}],\"title\":\"Microsoft would love your perspective\",\"isFinalPage\":false},{\"id\":\"7e1d47c6-99f7-4649-b16f-242f263cbc94\",\"displayName\":\"MultiSelect Verbatim\",\"questions\":[{\"id\":\"multiselect1\",\"type\":\"MultipleChoice\",\"questionLabel\":\"What is your reason to disconnect the subscription from pay as you go?\",\"required\":true,\"visible\":true,\"availableOptions\":[\"Need to use a different Azure subscription or resource group\",\"No further business need of the product\",\"Did not understand the pay as you go concept\",\"Did not understand the billing setup process\",\"Price or cost related\",\"Other (pls specify)\"]},{\"id\":\"verbatim1\",\"type\":\"Comment\",\"questionLabel\":\"Please elaborate your response to help us improve the product.\",\"required\":false,\"visible\":true}],\"title\":\"Microsoft would love your perspective\",\"isFinalPage\":false},{\"id\":\"ddcaefe9-744a-46cc-8e6c-5eebc6abefab\",\"displayName\":\"Thank You\",\"questions\":[{\"id\":\"thankYouText1\",\"type\":\"Label\",\"questionLabel\":\"Thank you for taking the time to give your feedback to Microsoft!\",\"required\":false,\"visible\":true}],\"title\":null,\"isFinalPage\":true}],\"branchingRules\":[],\"uiStringsUrl\":\"https://res.cdn.office.net/fg2uxschema/bb2dffcd-fb35-4aff-aa88-480f31acd6c7/7a4c6272-8c7c-4df1-b056-1484cf1c0671/Web-AdminPortal/\"},\"PreferredLaunchType\":0},\"StartTimeUtc\":\"2025-08-10T18:30:00Z\",\"EndTimeUtc\":\"2025-12-30T18:30:00Z\",\"PrimaryPriority\":3},\"Floodgate_Campaign_AdminPortal.0e749c96-9de6-44aa-9baf-3f3652f9c726\":{\"CampaignId\":\"0e749c96-9de6-44aa-9baf-3f3652f9c726\",\"GovernedChannelType\":0,\"NominationScheme\":{\"Type\":0,\"PercentageNumerator\":100,\"PercentageDenominator\":100,\"FallbackSurveyDurationSeconds\":0,\"NominationPeriod\":{\"Type\":0,\"IntervalSeconds\":1296000},\"CooldownPeriod\":{\"Type\":0,\"IntervalSeconds\":1296000}},\"SurveyTemplate\":{\"Type\":2,\"ActivationEvent\":{\"Type\":1,\"Sequence\":[{\"Type\":0,\"Activity\":\"BillingPolicyCreated\",\"Count\":1,\"IsAggregate\":false}]},\"UxSchema\":{\"variables\":{},\"pages\":[{\"id\":\"0e19ac6f-d831-499c-9e83-a709e27784b6\",\"displayName\":\"Survey Prompt\",\"questions\":[{\"id\":\"promptSubText1\",\"type\":\"Label\",\"questionLabel\":\". . .\",\"required\":false,\"visible\":true}],\"title\":\"How helpful was the process of creating a billing policy for pay-as-you-go services? \",\"isFinalPage\":false},{\"id\":\"050beaf0-2c8a-4234-b496-4df00c79a563\",\"displayName\":\"Vertical Rating with Verbatim Question\",\"questions\":[{\"id\":\"singleselect1\",\"type\":\"SingleSelect\",\"questionLabel\":\"How helpful was the process of creating a billing policy for pay-as-you-go services? \",\"required\":true,\"visible\":true,\"availableOptions\":[\"Extremely Helpful\",\"Very helpful\",\"Neutral\",\"Somewhat helpful\",\"Not at all helpful\"]},{\"id\":\"comment1\",\"type\":\"Comment\",\"questionLabel\":\"Tell us more about your answer\",\"required\":false,\"visible\":true}],\"title\":\"Microsoft would love your perspective\",\"isFinalPage\":false},{\"id\":\"ddcaefe9-744a-46cc-8e6c-5eebc6abefab\",\"displayName\":\"Thank You\",\"questions\":[{\"id\":\"thankYouText2\",\"type\":\"Label\",\"questionLabel\":\"Thank you for taking the time to give your feedback to Microsoft!\",\"required\":false,\"visible\":true}],\"title\":null,\"isFinalPage\":true}],\"branchingRules\":[],\"uiStringsUrl\":\"https://res.cdn.office.net/fg2uxschema/0e749c96-9de6-44aa-9baf-3f3652f9c726/5d9725ff-4fa2-41bc-af0a-3766083f1523/Web-AdminPortal/\"},\"PreferredLaunchType\":0},\"StartTimeUtc\":\"2025-07-25T05:00:00Z\",\"EndTimeUtc\":\"2025-12-15T08:00:00Z\",\"PrimaryPriority\":3},\"Floodgate_Campaign_AdminPortal.e187a7f9-a8d3-496a-835d-5b1d1b7a1d62\":{\"CampaignId\":\"e187a7f9-a8d3-496a-835d-5b1d1b7a1d62\",\"GovernedChannelType\":0,\"NominationScheme\":{\"Type\":0,\"PercentageNumerator\":100,\"PercentageDenominator\":100,\"FallbackSurveyDurationSeconds\":0,\"NominationPeriod\":{\"Type\":0,\"IntervalSeconds\":15552000},\"CooldownPeriod\":{\"Type\":0,\"IntervalSeconds\":1296000}},\"SurveyTemplate\":{\"Type\":2,\"ActivationEvent\":{\"Type\":1,\"Sequence\":[{\"Type\":0,\"Activity\":\"BackupTurnedOff\",\"Count\":1,\"IsAggregate\":false}]},\"UxSchema\":{\"variables\":{},\"pages\":[{\"id\":\"51e6db44-1070-45e6-be30-8c14a5b9e55a\",\"displayName\":\"Horizontal Rating\",\"questions\":[{\"id\":\"rating1\",\"type\":\"Rating\",\"questionLabel\":\"How satisfied are you with the Microsoft 365 Backup product?\",\"required\":true,\"visible\":true,\"ratingValues\":[\"1\",\"2\",\"3\",\"4\",\"5\"],\"leftLegendValue\":\"Very dissatisfied\",\"rightLegendValue\":\"Very satisfied\"}],\"title\":\"Microsoft would love your perspective\",\"isFinalPage\":false},{\"id\":\"7e1d47c6-99f7-4649-b16f-242f263cbc94\",\"displayName\":\"MultiSelect Verbatim\",\"questions\":[{\"id\":\"multiselect1\",\"type\":\"MultipleChoice\",\"questionLabel\":\"What is your reason to disable Microsoft 365 Backup? (Select all that apply)\",\"required\":true,\"visible\":true,\"availableOptions\":[\"Missing important features we needed\",\"Didn't fit our current budget and needs\",\"Backup or restore feels too slow\",\"Experienced issues with reliability\",\"Found a better price elsewhere\",\"Found a different product with better features\",\"Performance is not up to the mark\",\"Some other reason\"]},{\"id\":\"verbatim1\",\"type\":\"Comment\",\"questionLabel\":\"Please elaborate your response to help us improve the product\",\"required\":false,\"visible\":true}],\"title\":\"Microsoft would love your perspective\",\"isFinalPage\":false},{\"id\":\"ddcaefe9-744a-46cc-8e6c-5eebc6abefab\",\"displayName\":\"Thank You\",\"questions\":[{\"id\":\"thankYouText1\",\"type\":\"Label\",\"questionLabel\":\"Thank you for taking the time to give your feedback to Microsoft!\",\"required\":false,\"visible\":true}],\"title\":null,\"isFinalPage\":true}],\"branchingRules\":[],\"uiStringsUrl\":\"https://res.cdn.office.net/fg2uxschema/e187a7f9-a8d3-496a-835d-5b1d1b7a1d62/c8c1dbc5-79ec-4906-978e-c5922aae6d7e/Web-AdminPortal/\"},\"PreferredLaunchType\":0},\"StartTimeUtc\":\"2025-07-02T18:30:00Z\",\"EndTimeUtc\":\"2026-01-30T18:30:00Z\",\"PrimaryPriority\":3},\"Floodgate_Campaign_AdminPortal.1edd70f9-d14c-4c65-8556-c6f736b436c9\":{\"CampaignId\":\"1edd70f9-d14c-4c65-8556-c6f736b436c9\",\"GovernedChannelType\":0,\"NominationScheme\":{\"Type\":0,\"PercentageNumerator\":100,\"PercentageDenominator\":100,\"FallbackSurveyDurationSeconds\":0,\"NominationPeriod\":{\"Type\":0,\"IntervalSeconds\":2592000},\"CooldownPeriod\":{\"Type\":0,\"IntervalSeconds\":2592000}},\"SurveyTemplate\":{\"Type\":2,\"ActivationEvent\":{\"Type\":1,\"Sequence\":[{\"Type\":0,\"Activity\":\"PausePolicy\",\"Count\":1,\"IsAggregate\":false}]},\"UxSchema\":{\"variables\":{},\"pages\":[{\"id\":\"51e6db44-1070-45e6-be30-8c14a5b9e55a\",\"displayName\":\"Horizontal Rating\",\"questions\":[{\"id\":\"rating1\",\"type\":\"Rating\",\"questionLabel\":\"How satisfied are you with the Microsoft 365 Backup product?\",\"required\":true,\"visible\":true,\"ratingValues\":[\"1\",\"2\",\"3\",\"4\",\"5\"],\"leftLegendValue\":\"Very dissatisfied\",\"rightLegendValue\":\"Very satisfied\"}],\"title\":\"Microsoft would love your perspective\",\"isFinalPage\":false},{\"id\":\"7e1d47c6-99f7-4649-b16f-242f263cbc94\",\"displayName\":\"MultiSelect Verbatim\",\"questions\":[{\"id\":\"multiselect1\",\"type\":\"MultipleChoice\",\"questionLabel\":\"What made you pause Backup policy? \",\"required\":true,\"visible\":true,\"availableOptions\":[\"Backup for this data not needed anymore\",\"Optimizing for cost / budget reasons\",\"Currently testing, will resume at a later point of time\",\"Offboarding only for one workload\",\"Not planning to use the product anymore\",\"Other\"]},{\"id\":\"verbatim1\",\"type\":\"Comment\",\"questionLabel\":\"Please elaborate your response to help us improve the product\",\"required\":false,\"visible\":true}],\"title\":\"Microsoft would love your perspective\",\"isFinalPage\":false},{\"id\":\"ddcaefe9-744a-46cc-8e6c-5eebc6abefab\",\"displayName\":\"Thank You\",\"questions\":[{\"id\":\"thankYouText1\",\"type\":\"Label\",\"questionLabel\":\"Thank you for taking the time to give your feedback to Microsoft!\",\"required\":false,\"visible\":true}],\"title\":null,\"isFinalPage\":true}],\"branchingRules\":[],\"uiStringsUrl\":\"https://res.cdn.office.net/fg2uxschema/1edd70f9-d14c-4c65-8556-c6f736b436c9/e11a24c7-bdf5-422d-a412-b722213d7388/Web-AdminPortal/\"},\"PreferredLaunchType\":0},\"StartTimeUtc\":\"2025-08-03T18:30:00Z\",\"EndTimeUtc\":\"2025-12-30T18:30:00Z\",\"PrimaryPriority\":3},\"Floodgate_Campaign_AdminPortal.0472551c-40a2-423b-8eb9-e35ded05618a\":{\"CampaignId\":\"0472551c-40a2-423b-8eb9-e35ded05618a\",\"GovernedChannelType\":0,\"NominationScheme\":{\"Type\":0,\"PercentageNumerator\":50,\"PercentageDenominator\":100,\"FallbackSurveyDurationSeconds\":0,\"NominationPeriod\":{\"Type\":0,\"IntervalSeconds\":1296000},\"CooldownPeriod\":{\"Type\":0,\"IntervalSeconds\":7776000}},\"SurveyTemplate\":{\"Type\":2,\"ActivationEvent\":{\"Type\":1,\"Sequence\":[{\"Type\":0,\"Activity\":\"CopilotSearchUpdateSettings\",\"Count\":1,\"IsAggregate\":false}]},\"UxSchema\":{\"variables\":{},\"pages\":[{\"id\":\"0e19ac6f-d831-499c-9e83-a709e27784b6\",\"displayName\":\"Survey Prompt\",\"questions\":[{\"id\":\"promptSubText1\",\"type\":\"Label\",\"questionLabel\":\"We have just two questions.\",\"required\":false,\"visible\":true}],\"title\":\"We'd love your feedback on Copilot Control System\",\"isFinalPage\":false},{\"id\":\"050beaf0-2c8a-4234-b496-4df00c79a563\",\"displayName\":\"Vertical Rating with Verbatim Question\",\"questions\":[{\"id\":\"singleselect1\",\"type\":\"SingleSelect\",\"questionLabel\":\"How helpful did you find Copilot Search management in the Copilot Control System?\",\"required\":true,\"visible\":true,\"availableOptions\":[\"Extremely helpful\",\"Very helpful\",\"Neutral\",\"Somewhat helpful\",\"Not at all helpful\"]},{\"id\":\"comment1\",\"type\":\"Comment\",\"questionLabel\":\"Please tell us more about why you chose that answer\",\"required\":false,\"visible\":true}],\"title\":\"Microsoft would love your perspective\",\"isFinalPage\":false},{\"id\":\"ddcaefe9-744a-46cc-8e6c-5eebc6abefab\",\"displayName\":\"Thank You\",\"questions\":[{\"id\":\"thankYouText2\",\"type\":\"Label\",\"questionLabel\":\"Thank you for taking the time to give your feedback to Microsoft!\",\"required\":false,\"visible\":true}],\"title\":null,\"isFinalPage\":true}],\"branchingRules\":[],\"uiStringsUrl\":\"https://res.cdn.office.net/fg2uxschema/0472551c-40a2-423b-8eb9-e35ded05618a/e76a3183-6323-4c5a-a83a-a81002941a72/Web-AdminPortal/\"},\"PreferredLaunchType\":0},\"StartTimeUtc\":\"2025-07-28T07:00:00Z\",\"EndTimeUtc\":\"2025-12-31T08:00:00Z\",\"PrimaryPriority\":3},\"Floodgate_Campaign_AdminPortal.3e4a5da9-592c-4a60-b772-bda726731f47\":{\"CampaignId\":\"3e4a5da9-592c-4a60-b772-bda726731f47\",\"GovernedChannelType\":0,\"NominationScheme\":{\"Type\":0,\"PercentageNumerator\":100,\"PercentageDenominator\":100,\"FallbackSurveyDurationSeconds\":0,\"NominationPeriod\":{\"Type\":0,\"IntervalSeconds\":1296000},\"CooldownPeriod\":{\"Type\":0,\"IntervalSeconds\":7776000}},\"SurveyTemplate\":{\"Type\":2,\"ActivationEvent\":{\"Type\":1,\"Sequence\":[{\"Type\":0,\"Activity\":\"WindowsPinningCopilotSetting\",\"Count\":1,\"IsAggregate\":false}]},\"UxSchema\":{\"variables\":{},\"pages\":[{\"id\":\"050beaf0-2c8a-4234-b496-4df00c79a563\",\"displayName\":\"Vertical Rating with Verbatim Question\",\"questions\":[{\"id\":\"singleselect1\",\"type\":\"SingleSelect\",\"questionLabel\":\"Please tell us why you didn't pin the Copilot app to Windows? \",\"required\":true,\"visible\":true,\"availableOptions\":[\"I don't have the authority to make this decision\",\"I have concerns about security, compliance and data access \",\"I don't understand the value of Copilot\",\"The setting is difficult to use or understand\",\"Other (let us know below)\"]},{\"id\":\"comment1\",\"type\":\"Comment\",\"questionLabel\":\"Is there anything else that would help you choose the Copilot app?\",\"required\":false,\"visible\":true}],\"title\":\"Microsoft would love your perspective\",\"isFinalPage\":false},{\"id\":\"ddcaefe9-744a-46cc-8e6c-5eebc6abefab\",\"displayName\":\"Thank You\",\"questions\":[{\"id\":\"thankYouText1\",\"type\":\"Label\",\"questionLabel\":\"Thank you for taking the time to give your feedback to Microsoft!\",\"required\":false,\"visible\":true}],\"title\":null,\"isFinalPage\":true}],\"additionalCapabilities\":{\"email\":{\"targetPage\":0}},\"branchingRules\":[],\"uiStringsUrl\":\"https://res.cdn.office.net/fg2uxschema/3e4a5da9-592c-4a60-b772-bda726731f47/ea3730b7-5b3d-47ab-aed1-acab6213b98b/Web-AdminPortal/\"},\"PreferredLaunchType\":0},\"StartTimeUtc\":\"2025-08-07T18:30:00Z\",\"EndTimeUtc\":\"2026-01-30T18:30:00Z\",\"PrimaryPriority\":3},\"Floodgate_Campaign_AdminPortal.adb678f7-f5e8-49d7-acf2-3f3eac3694f5\":{\"CampaignId\":\"adb678f7-f5e8-49d7-acf2-3f3eac3694f5\",\"GovernedChannelType\":0,\"NominationScheme\":{\"Type\":0,\"PercentageNumerator\":100,\"PercentageDenominator\":100,\"FallbackSurveyDurationSeconds\":0,\"NominationPeriod\":{\"Type\":0,\"IntervalSeconds\":1296000},\"CooldownPeriod\":{\"Type\":0,\"IntervalSeconds\":7776000}},\"SurveyTemplate\":{\"Type\":2,\"ActivationEvent\":{\"Type\":1,\"Sequence\":[{\"Type\":0,\"Activity\":\"test\",\"Count\":1,\"IsAggregate\":false}]},\"UxSchema\":{\"variables\":{},\"pages\":[{\"id\":\"51e6db44-1070-45e6-be30-8c14a5b9e55a\",\"displayName\":\"Horizontal Rating\",\"questions\":[{\"id\":\"rating1\",\"type\":\"Rating\",\"questionLabel\":\"How likely are you to recommend <app> to others, if asked?\",\"required\":true,\"visible\":true,\"ratingValues\":[\"1\",\"2\",\"3\",\"4\",\"5\"],\"leftLegendValue\":\"Not at all likely\",\"rightLegendValue\":\"Extremely likely\"}],\"title\":\"Microsoft would love your perspective\",\"isFinalPage\":false},{\"id\":\"050beaf0-2c8a-4234-b496-4df00c79a563\",\"displayName\":\"Vertical Rating with Verbatim Question\",\"questions\":[{\"id\":\"singleselect1\",\"type\":\"SingleSelect\",\"questionLabel\":\"How would you rate the <app feature name> feature?\",\"required\":true,\"visible\":true,\"availableOptions\":[\"5 - Excellent\",\"4\",\"3\",\"2\",\"1 - Poor\"]},{\"id\":\"comment1\",\"type\":\"Comment\",\"questionLabel\":\"Please tell us how we can improve your experience.\",\"required\":false,\"visible\":true}],\"title\":\"Microsoft would love your perspective\",\"isFinalPage\":false},{\"id\":\"ddcaefe9-744a-46cc-8e6c-5eebc6abefab\",\"displayName\":\"Thank You\",\"questions\":[{\"id\":\"thankYouText1\",\"type\":\"Label\",\"questionLabel\":\"Thank you for taking the time to give your feedback to Microsoft!\",\"required\":false,\"visible\":true}],\"title\":null,\"isFinalPage\":true}],\"branchingRules\":[],\"uiStringsUrl\":\"https://res.cdn.office.net/fg2uxschema/adb678f7-f5e8-49d7-acf2-3f3eac3694f5/133632e1-1ccb-4e30-81d6-86cc950502eb/Web-AdminPortal/\"},\"PreferredLaunchType\":0},\"StartTimeUtc\":\"2025-08-07T18:30:00Z\",\"EndTimeUtc\":\"2025-09-06T18:30:00Z\",\"PrimaryPriority\":3},\"Floodgate_Campaign_AdminPortal.2d202491-0ec2-4f90-8bb1-c04afd1b9a75\":{\"CampaignId\":\"2d202491-0ec2-4f90-8bb1-c04afd1b9a75\",\"GovernedChannelType\":0,\"NominationScheme\":{\"Type\":0,\"PercentageNumerator\":100,\"PercentageDenominator\":100,\"FallbackSurveyDurationSeconds\":0,\"NominationPeriod\":{\"Type\":0,\"IntervalSeconds\":1296000},\"CooldownPeriod\":{\"Type\":0,\"IntervalSeconds\":1296000}},\"SurveyTemplate\":{\"Type\":2,\"ActivationEvent\":{\"Type\":1,\"Sequence\":[{\"Type\":0,\"Activity\":\"BillingPolicySetupNotCompleted\",\"Count\":1,\"IsAggregate\":false}]},\"UxSchema\":{\"variables\":{},\"pages\":[{\"id\":\"0e19ac6f-d831-499c-9e83-a709e27784b6\",\"displayName\":\"Survey Prompt\",\"questions\":[{\"id\":\"promptSubText1\",\"type\":\"Label\",\"questionLabel\":\". . .\",\"required\":false,\"visible\":true}],\"title\":\"Tell us about why you're exiting. Your feedback helps us improve.\",\"isFinalPage\":false},{\"id\":\"050beaf0-2c8a-4234-b496-4df00c79a563\",\"displayName\":\"Vertical Rating with Verbatim Question\",\"questions\":[{\"id\":\"singleselect1\",\"type\":\"SingleSelect\",\"questionLabel\":\"Tell us about why you're exiting. Your feedback helps us improve.\",\"required\":true,\"visible\":true,\"availableOptions\":[\"I need to manage an Azure subscription\",\"I was exploring, I'm not ready to create a policy\",\"The setup process was confusing or unclear\",\"I don't have the required information or permissions\",\"Other (please specify)\"]},{\"id\":\"comment1\",\"type\":\"Comment\",\"questionLabel\":\"Share more details (optional)\",\"required\":false,\"visible\":true}],\"title\":\"Microsoft would love your perspective\",\"isFinalPage\":false},{\"id\":\"ddcaefe9-744a-46cc-8e6c-5eebc6abefab\",\"displayName\":\"Thank You\",\"questions\":[{\"id\":\"thankYouText2\",\"type\":\"Label\",\"questionLabel\":\"Thank you for taking the time to give your feedback to Microsoft!\",\"required\":false,\"visible\":true}],\"title\":null,\"isFinalPage\":true}],\"branchingRules\":[],\"uiStringsUrl\":\"https://res.cdn.office.net/fg2uxschema/2d202491-0ec2-4f90-8bb1-c04afd1b9a75/0258c40d-95de-48ac-b7b3-aad0046dfc17/Web-AdminPortal/\"},\"PreferredLaunchType\":0},\"StartTimeUtc\":\"2025-07-25T05:00:00Z\",\"EndTimeUtc\":\"2025-12-15T08:00:00Z\",\"PrimaryPriority\":3},\"Floodgate_Campaign_AdminPortal.89ca0760-82ca-43a8-8c20-5f11426769d6\":{\"CampaignId\":\"89ca0760-82ca-43a8-8c20-5f11426769d6\",\"GovernedChannelType\":0,\"NominationScheme\":{\"Type\":0,\"PercentageNumerator\":100,\"PercentageDenominator\":100,\"FallbackSurveyDurationSeconds\":0,\"NominationPeriod\":{\"Type\":0,\"IntervalSeconds\":1296000},\"CooldownPeriod\":{\"Type\":0,\"IntervalSeconds\":1296000}},\"SurveyTemplate\":{\"Type\":2,\"ActivationEvent\":{\"Type\":1,\"Sequence\":[{\"Type\":0,\"Activity\":\"BillingPolicyDeleted\",\"Count\":1,\"IsAggregate\":false}]},\"UxSchema\":{\"variables\":{},\"pages\":[{\"id\":\"0e19ac6f-d831-499c-9e83-a709e27784b6\",\"displayName\":\"Survey Prompt\",\"questions\":[{\"id\":\"promptSubText1\",\"type\":\"Label\",\"questionLabel\":\"What led you to delete this billing policy? Your feedback helps us improve.\",\"required\":false,\"visible\":true}],\"title\":\"We'd love your feedback\",\"isFinalPage\":false},{\"id\":\"050beaf0-2c8a-4234-b496-4df00c79a563\",\"displayName\":\"Vertical Rating with Verbatim Question\",\"questions\":[{\"id\":\"singleselect1\",\"type\":\"SingleSelect\",\"questionLabel\":\"What led you to delete this billing policy? Your feedback helps us improve.\",\"required\":true,\"visible\":true,\"availableOptions\":[\"I no longer need pay-as-you-go for Copilot services\",\"I'm switching to a different billing model\",\"This policy wasn't set up correctly\",\"I'm consolidating policies\",\"Other (please specify)\"]},{\"id\":\"comment1\",\"type\":\"Comment\",\"questionLabel\":\"Tell us more about your answer\",\"required\":false,\"visible\":true}],\"title\":\"Microsoft would love your perspective\",\"isFinalPage\":false},{\"id\":\"ddcaefe9-744a-46cc-8e6c-5eebc6abefab\",\"displayName\":\"Thank You\",\"questions\":[{\"id\":\"thankYouText2\",\"type\":\"Label\",\"questionLabel\":\"Thank you for taking the time to give your feedback to Microsoft!\",\"required\":false,\"visible\":true}],\"title\":null,\"isFinalPage\":true}],\"branchingRules\":[],\"uiStringsUrl\":\"https://res.cdn.office.net/fg2uxschema/89ca0760-82ca-43a8-8c20-5f11426769d6/5ccb23f0-191b-4982-a608-2386293e3f8d/Web-AdminPortal/\"},\"PreferredLaunchType\":0},\"StartTimeUtc\":\"2025-07-25T05:00:00Z\",\"EndTimeUtc\":\"2025-12-15T08:00:00Z\",\"PrimaryPriority\":3},\"Floodgate_Campaign_AdminPortal.aa7238bb-1faa-4f59-9ff7-58ef41081868\":{\"CampaignId\":\"aa7238bb-1faa-4f59-9ff7-58ef41081868\",\"GovernedChannelType\":0,\"NominationScheme\":{\"Type\":0,\"PercentageNumerator\":50,\"PercentageDenominator\":100,\"FallbackSurveyDurationSeconds\":0,\"NominationPeriod\":{\"Type\":0,\"IntervalSeconds\":1296000},\"CooldownPeriod\":{\"Type\":0,\"IntervalSeconds\":7776000}},\"SurveyTemplate\":{\"Type\":2,\"ActivationEvent\":{\"Type\":1,\"Sequence\":[{\"Type\":0,\"Activity\":\"UserSettingChanged\",\"Count\":1,\"IsAggregate\":false}]},\"UxSchema\":{\"variables\":{},\"pages\":[{\"id\":\"0e19ac6f-d831-499c-9e83-a709e27784b6\",\"displayName\":\"Survey Prompt\",\"questions\":[{\"id\":\"promptSubText1\",\"type\":\"Label\",\"questionLabel\":\"We have just two questions.\",\"required\":false,\"visible\":true}],\"title\":\"We'd love your feedback on Microsoft\",\"isFinalPage\":false},{\"id\":\"b8d2ac03-6669-40c7-8829-27114df162cf\",\"displayName\":\"Verbatim\",\"questions\":[{\"id\":\"verbatim1\",\"type\":\"Comment\",\"questionLabel\":\"What prompted this Copilot setting change? Your feedback helps us improve.\",\"required\":false,\"visible\":true}],\"title\":\"Microsoft would love your perspective\",\"isFinalPage\":false}],\"branchingRules\":[],\"uiStringsUrl\":\"https://res.cdn.office.net/fg2uxschema/aa7238bb-1faa-4f59-9ff7-58ef41081868/07fc14fe-bc52-4119-8490-20cb8cdd0e0b/Web-AdminPortal/\"},\"PreferredLaunchType\":0},\"StartTimeUtc\":\"2025-06-24T07:00:00Z\",\"EndTimeUtc\":\"2026-01-03T08:00:00Z\",\"PrimaryPriority\":3},\"Floodgate_Campaign_AdminPortal.3efd818d-0d7b-4dee-87f1-87940c7e6dd9\":{\"CampaignId\":\"3efd818d-0d7b-4dee-87f1-87940c7e6dd9\",\"GovernedChannelType\":0,\"NominationScheme\":{\"Type\":0,\"PercentageNumerator\":50,\"PercentageDenominator\":100,\"FallbackSurveyDurationSeconds\":0,\"NominationPeriod\":{\"Type\":0,\"IntervalSeconds\":1296000},\"CooldownPeriod\":{\"Type\":0,\"IntervalSeconds\":7776000}},\"SurveyTemplate\":{\"Type\":2,\"ActivationEvent\":{\"Type\":1,\"Sequence\":[{\"Type\":0,\"Activity\":\"Office.Admin.Copilot.Control.System\",\"Count\":1,\"IsAggregate\":false}]},\"UxSchema\":{\"variables\":{},\"pages\":[{\"id\":\"0e19ac6f-d831-499c-9e83-a709e27784b6\",\"displayName\":\"Survey Prompt\",\"questions\":[{\"id\":\"promptSubText1\",\"type\":\"Label\",\"questionLabel\":\"We have just two questions.\",\"required\":false,\"visible\":true}],\"title\":\"We'd love your feedback on Copilot Control System\",\"isFinalPage\":false},{\"id\":\"050beaf0-2c8a-4234-b496-4df00c79a563\",\"displayName\":\"Vertical Rating with Verbatim Question\",\"questions\":[{\"id\":\"singleselect1\",\"type\":\"SingleSelect\",\"questionLabel\":\"How was your experience with agent management in Copilot Control System?\",\"required\":true,\"visible\":true,\"availableOptions\":[\"Extremely helpful\",\"Very helpful\",\"Neutral\",\"Somewhat helpful\",\"Not at all helpful\"]},{\"id\":\"comment1\",\"type\":\"Comment\",\"questionLabel\":\"Please tell us more why you chose that answer\",\"required\":false,\"visible\":true}],\"title\":\"Microsoft would love your perspective\",\"isFinalPage\":false},{\"id\":\"ddcaefe9-744a-46cc-8e6c-5eebc6abefab\",\"displayName\":\"Thank You\",\"questions\":[{\"id\":\"thankYouText2\",\"type\":\"Label\",\"questionLabel\":\"Thank you for taking the time to give your feedback to Microsoft!\",\"required\":false,\"visible\":true}],\"title\":null,\"isFinalPage\":true}],\"branchingRules\":[],\"uiStringsUrl\":\"https://res.cdn.office.net/fg2uxschema/3efd818d-0d7b-4dee-87f1-87940c7e6dd9/7071d4f0-b1e4-4477-994e-8909a331bbc1/Web-AdminPortal/\"},\"PreferredLaunchType\":0},\"StartTimeUtc\":\"2025-06-24T07:00:00Z\",\"EndTimeUtc\":\"2026-01-01T08:00:00Z\",\"PrimaryPriority\":3},\"Floodgate_Campaign_AdminPortal.16251047-5258-45a3-a826-f9d51adf0a6b\":{\"CampaignId\":\"16251047-5258-45a3-a826-f9d51adf0a6b\",\"GovernedChannelType\":0,\"NominationScheme\":{\"Type\":0,\"PercentageNumerator\":100,\"PercentageDenominator\":100,\"FallbackSurveyDurationSeconds\":0,\"NominationPeriod\":{\"Type\":0,\"IntervalSeconds\":1296000},\"CooldownPeriod\":{\"Type\":0,\"IntervalSeconds\":7776000}},\"SurveyTemplate\":{\"Type\":2,\"ActivationEvent\":{\"Type\":1,\"Sequence\":[{\"Type\":0,\"Activity\":\"CopilotUnpin\",\"Count\":1,\"IsAggregate\":false}]},\"UxSchema\":{\"variables\":{},\"pages\":[{\"id\":\"050beaf0-2c8a-4234-b496-4df00c79a563\",\"displayName\":\"Vertical Rating with Verbatim Question\",\"questions\":[{\"id\":\"singleselect1\",\"type\":\"SingleSelect\",\"questionLabel\":\"What would help you choose to pin Copilot Chat for your organization?\",\"required\":true,\"visible\":true,\"availableOptions\":[\"Provide more information about security, compliance, and data access concerns.\",\"Help me find more training materials for users.\",\"Give more industry- or department-specific examples to help me find value.\",\"Nothing. My organization doesn't want to use AI solutions.\",\"We decided to use another AI solution.\"]},{\"id\":\"comment1\",\"type\":\"Comment\",\"questionLabel\":\"Is there anything else that would help you choose Copilot Chat?\",\"required\":false,\"visible\":true}],\"title\":\"Microsoft would love your perspective\",\"isFinalPage\":false},{\"id\":\"ddcaefe9-744a-46cc-8e6c-5eebc6abefab\",\"displayName\":\"Thank You\",\"questions\":[{\"id\":\"thankYouText1\",\"type\":\"Label\",\"questionLabel\":\"Thank you for taking the time to give your feedback to Microsoft!\",\"required\":false,\"visible\":true}],\"title\":null,\"isFinalPage\":true}],\"additionalCapabilities\":{\"email\":{\"targetPage\":0}},\"branchingRules\":[],\"uiStringsUrl\":\"https://res.cdn.office.net/fg2uxschema/16251047-5258-45a3-a826-f9d51adf0a6b/a22c2815-e232-4c88-8e57-37b296df8797/Web-AdminPortal/\"},\"PreferredLaunchType\":0},\"StartTimeUtc\":\"2025-04-15T18:30:00Z\",\"EndTimeUtc\":\"2026-05-20T07:00:00Z\",\"PrimaryPriority\":3}},\"configType\":0,\"eTag\":\"\\\"470ZMe+7MzIWYS3hfPdJW+TR7AVEeKwnvZ7lgcSYVNw=\\\"\",\"expiration\":1761126677971,\"cacheUpdateTime\":1761123077713,\"lastFetchTokenHash\":0,\"appVersion\":\"0.0.13\"}"
+        },
+        {
+          "name": "obf-CampaignStates",
+          "value": "{\"CampaignStates\":[]}"
+        },
+        {
+          "name": "O365Shell_ECS_config",
+          "value": "{\"35e3ff1a5f3f2b23b9ae9818dd8cc103ca61f13725328e228f5764c86dee3a4e\":{\"expiryTime\":1761209499828,\"value\":{\"OneShell\":{\"MaxRetriesForXMLRequest\":5,\"M365CopilotRebrandingEnabled\":true,\"isShellControlBaseConditionalUpdateEnabled\":false,\"default\":true},\"Headers\":{\"ETag\":\"\\\"swhuNN8Kt+nPvyCjp+guVSyGDe7wUZL4OjsS7pZ4MSw=\\\"\",\"Expires\":\"Wed, 22 Oct 2025 09:51:18 GMT\",\"CountryCode\":\"US\",\"StatusCode\":\"200\"},\"ConfigIDs\":{\"OneShell\":\"P-R-1640971-4-3,P-R-1535312-6-8,P-D-1706208-2-3,P-D-1117449-1-4\"}}}}"
+        },
+        {
+          "name": "recommendationName",
+          "value": "TooManyGlobalAdmins"
+        },
+        {
+          "name": "sessionTracking_SignedInAccountList",
+          "value": "[{\"sessionTrackingKey\":\"sessionTracking_10032003b92db598\",\"lastActiveTime\":1761123099857}]"
+        },
+        {
+          "name": "obf-FloodgateSettings",
+          "value": "null"
+        },
+        {
+          "name": "obf-SurveyActivationStats",
+          "value": "{\"Surveys\":{}}"
+        },
+        {
+          "name": "m365admin_SHDAllServicesMicrosoftActiveIssues_starredItems",
+          "value": "[]"
+        },
+        {
+          "name": "SurveyEligibilityLastCheck",
+          "value": "1761123079002"
+        },
+        {
+          "name": "obf-GovernedChannelStates",
+          "value": "{\"ChannelStates\":[{\"ChannelType\":0,\"CooldownStartTimeUtc\":\"1601-01-01T00:00:00.000Z\"},{\"ChannelType\":1,\"CooldownStartTimeUtc\":\"1601-01-01T00:00:00.000Z\"},{\"ChannelType\":2,\"CooldownStartTimeUtc\":\"1601-01-01T00:00:00.000Z\"},{\"ChannelType\":3,\"CooldownStartTimeUtc\":\"1601-01-01T00:00:00.000Z\"},{\"ChannelType\":4,\"CooldownStartTimeUtc\":\"1601-01-01T00:00:00.000Z\"},{\"ChannelType\":8,\"CooldownStartTimeUtc\":\"1601-01-01T00:00:00.000Z\"}]}"
+        },
+        {
+          "name": "InMacHvcLoaderConfigurationState",
+          "value": "{\"agents-settings\":{\"locdbg\":false},\"agents-settings-detail-panel\":{\"locdbg\":false},\"billing\":{\"locdbg\":false},\"centro-copilot-hvc\":{\"locdbg\":false},\"centro-copilot-sydney\":{\"locdbg\":false},\"scc-nexus\":{\"locdbg\":false}}"
+        },
+        {
+          "name": "m365admin_SHDAllServicesMicrosoftServiceHealth_starredItems",
+          "value": "[]"
+        },
+        {
+          "name": "sessionTracking_10032003b92db598",
+          "value": "{\"authenticatedState\":1,\"upn\":\"ethan.cheung@dayonebio.com\",\"idp\":\"aad\",\"lastActiveTime\":1761123099857}"
+        }
+      ]
+    },
+    {
+      "origin": "https://login.okta.com",
+      "localStorage": [
+        {
+          "name": "okta_accounts",
+          "value": "[{\"id\":\"https://dayonebio.okta.com::ethan.cheung@dayonebio.com\",\"login\":\"ethan.cheung@dayonebio.com\",\"displayName\":\"Ethan Cheung\",\"origin\":\"https://dayonebio.okta.com\",\"lastUpdated\":\"2025-10-22T08:50:59.323Z\"}]"
+        }
+      ]
+    },
+    {
+      "origin": "https://fpt.dfp.microsoft.com",
+      "localStorage": [
+        {
+          "name": "MUID",
+          "value": "35bea847-f6d7-45a3-b669-466ee7145b53"
+        }
+      ]
+    }
+  ]
+}

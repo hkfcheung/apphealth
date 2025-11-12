@@ -1,0 +1,65 @@
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile.backend
+    container_name: status-dashboard-backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data:/data
+      - ./seed_config.json:/app/seed_config.json:ro
+      - ./microsoft_auth_state.json:/app/microsoft_auth_state.json:ro
+    environment:
+      - DATABASE_URL=sqlite:////data/status_dashboard.db
+      - LOG_LEVEL=INFO
+      - CORS_ORIGINS=["http://localhost:5173","http://localhost"]
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend
+    container_name: status-dashboard-frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # Ollama service for GPT-OSS models (optional - can also use host Ollama)
+  ollama:
+    image: ollama/ollama:latest
+    container_name: apphealth_ollama
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+    environment:
+      - OLLAMA_HOST=0.0.0.0
+    restart: unless-stopped
+    # Uncomment for GPU support (requires nvidia-container-toolkit)
+    # deploy:
+    #   resources:
+    #     reservations:
+    #       devices:
+    #         - driver: nvidia
+    #           count: 1
+    #           capabilities: [gpu]
+
+volumes:
+  data:
+    driver: local
+  ollama_data:
+    driver: local

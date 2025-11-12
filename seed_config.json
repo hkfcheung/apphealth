@@ -1,0 +1,191 @@
+{
+  "sites": [
+    {
+      "id": "adobe",
+      "display_name": "Adobe Status",
+      "status_page": "https://status.adobe.com/",
+      "feed_url": null,
+      "poll_frequency_seconds": 600,
+      "parser": "html",
+      "is_active": true,
+      "console_only": false,
+      "downdetector_url": "https://downdetector.com/status/adobe/"
+    },
+    {
+      "id": "atlassian",
+      "display_name": "Atlassian/Jira",
+      "status_page": "https://status.atlassian.com/",
+      "feed_url": "https://status.atlassian.com/history.rss",
+      "poll_frequency_seconds": 300,
+      "parser": "rss",
+      "is_active": true,
+      "console_only": false,
+      "downdetector_url": "https://downdetector.com/status/jira/"
+    },
+    {
+      "id": "aws-cloudfront",
+      "display_name": "AWS CloudFront",
+      "status_page": "https://status.aws.amazon.com/",
+      "feed_url": "https://status.aws.amazon.com/rss/cloudfront.rss",
+      "poll_frequency_seconds": 300,
+      "parser": "rss",
+      "is_active": true,
+      "console_only": false,
+      "downdetector_url": "https://downdetector.com/status/aws-amazon-web-services/"
+    },
+    {
+      "id": "aws-ec2",
+      "display_name": "AWS EC2",
+      "status_page": "https://status.aws.amazon.com/",
+      "feed_url": "https://status.aws.amazon.com/rss/ec2-us-west-2.rss",
+      "poll_frequency_seconds": 300,
+      "parser": "rss",
+      "is_active": true,
+      "console_only": false,
+      "downdetector_url": "https://downdetector.com/status/aws-amazon-web-services/"
+    },
+    {
+      "id": "aws-health-dashboard",
+      "display_name": "AWS Health Dashboard",
+      "status_page": "https://health.aws.amazon.com/health/status",
+      "feed_url": null,
+      "poll_frequency_seconds": 600,
+      "parser": "html",
+      "is_active": false,
+      "console_only": true
+    },
+    {
+      "id": "aws-lambda",
+      "display_name": "AWS Lambda",
+      "status_page": "https://status.aws.amazon.com/",
+      "feed_url": "https://status.aws.amazon.com/rss/lambda-us-west-2.rss",
+      "poll_frequency_seconds": 300,
+      "parser": "rss",
+      "is_active": true,
+      "console_only": false,
+      "downdetector_url": "https://downdetector.com/status/aws-amazon-web-services/"
+    },
+    {
+      "id": "aws-rds",
+      "display_name": "AWS RDS",
+      "status_page": "https://status.aws.amazon.com/",
+      "feed_url": "https://status.aws.amazon.com/rss/rds-us-west-2.rss",
+      "poll_frequency_seconds": 300,
+      "parser": "rss",
+      "is_active": true,
+      "console_only": false,
+      "downdetector_url": "https://downdetector.com/status/aws-amazon-web-services/"
+    },
+    {
+      "id": "box",
+      "display_name": "Box",
+      "status_page": "https://status.box.com/",
+      "feed_url": "https://status.box.com/api/v2/summary.json",
+      "poll_frequency_seconds": 300,
+      "parser": "json",
+      "is_active": true,
+      "console_only": false,
+      "downdetector_url": "https://downdetector.com/status/box/"
+    },
+    {
+      "id": "docusign",
+      "display_name": "DocuSign",
+      "status_page": "https://status.docusign.com/",
+      "feed_url": "https://status.docusign.com/history.rss",
+      "poll_frequency_seconds": 300,
+      "parser": "rss",
+      "is_active": true,
+      "console_only": false,
+      "downdetector_url": "https://downdetector.com/status/docusign/"
+    },
+    {
+      "id": "microsoft-365",
+      "display_name": "Microsoft 365",
+      "status_page": "https://admin.microsoft.com/Adminportal/Home#/servicehealth/overview",
+      "feed_url": null,
+      "poll_frequency_seconds": 300,
+      "parser": "html",
+      "is_active": true,
+      "console_only": false,
+      "use_playwright": true,
+      "auth_state_file": "/app/microsoft_auth_state.json",
+      "downdetector_url": "https://downdetector.com/status/outlook/"
+    },
+    {
+      "id": "netlify",
+      "display_name": "Netlify",
+      "status_page": "https://www.netlifystatus.com/",
+      "feed_url": "https://www.netlifystatus.com/history.rss",
+      "poll_frequency_seconds": 300,
+      "parser": "rss",
+      "is_active": true,
+      "console_only": false,
+      "downdetector_url": "https://downdetector.com/status/netlify/"
+    },
+    {
+      "id": "openai",
+      "display_name": "OpenAI",
+      "status_page": "https://status.openai.com/",
+      "feed_url": "https://status.openai.com/history.rss",
+      "poll_frequency_seconds": 300,
+      "parser": "rss",
+      "is_active": true,
+      "console_only": false,
+      "downdetector_url": "https://downdetector.com/status/openai/"
+    },
+    {
+      "id": "sentinelone",
+      "display_name": "SentinelOne",
+      "status_page": "https://status.sentinelone.com/",
+      "feed_url": null,
+      "poll_frequency_seconds": 600,
+      "parser": "html",
+      "is_active": true,
+      "console_only": false
+    },
+    {
+      "id": "slack",
+      "display_name": "Slack",
+      "status_page": "https://status.slack.com/",
+      "feed_url": "https://status.slack.com/feed/rss",
+      "poll_frequency_seconds": 300,
+      "parser": "rss",
+      "is_active": true,
+      "console_only": false,
+      "downdetector_url": "https://downdetector.com/status/slack/"
+    },
+    {
+      "id": "smartsheet",
+      "display_name": "Smartsheet",
+      "status_page": "https://status.smartsheet.com/",
+      "feed_url": "https://status.smartsheet.com/history.rss",
+      "poll_frequency_seconds": 300,
+      "parser": "rss",
+      "is_active": true,
+      "console_only": false,
+      "downdetector_url": "https://downdetector.com/status/smartsheet/"
+    },
+    {
+      "id": "veeva",
+      "display_name": "Veeva",
+      "status_page": "https://veeva-trust.status.page/",
+      "feed_url": null,
+      "poll_frequency_seconds": 600,
+      "parser": "html",
+      "is_active": true,
+      "console_only": false,
+      "use_playwright": false
+    },
+    {
+      "id": "Zoom",
+      "display_name": "Zoom",
+      "status_page": "https://status.zoom.us",
+      "feed_url": "https://www.zoomstatus.com/history.rss",
+      "poll_frequency_seconds": 300,
+      "parser": "auto",
+      "is_active": true,
+      "console_only": false,
+      "downdetector_url": "https://downdetector.com/status/zoom/"
+    }
+  ]
+}
